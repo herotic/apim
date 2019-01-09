@@ -1,0 +1,1349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exp:Export Version="3.0"
+    xmlns:L7p="http://www.layer7tech.com/ws/policy"
+    xmlns:exp="http://www.layer7tech.com/ws/policy/export" xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy">
+    <exp:References>
+        <IDProviderReference RefType="com.l7tech.console.policy.exporter.IdProviderReference">
+            <GOID>0000000000000000fffffffffffffffe</GOID>
+            <Name>Internal Identity Provider</Name>
+            <Props>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGphdmEgdmVyc2lvbj0iMS44&#xd;
+LjBfMTAyIiBjbGFzcz0iamF2YS5iZWFucy5YTUxEZWNvZGVyIj4KIDxvYmplY3QgY2xhc3M9Imph&#xd;
+dmEudXRpbC5IYXNoTWFwIj4KICA8dm9pZCBtZXRob2Q9InB1dCI+CiAgIDxzdHJpbmc+YWRtaW5F&#xd;
+bmFibGVkPC9zdHJpbmc+CiAgIDxib29sZWFuPnRydWU8L2Jvb2xlYW4+CiAgPC92b2lkPgogPC9v&#xd;
+YmplY3Q+CjwvamF2YT4K</Props>
+            <TypeVal>1</TypeVal>
+        </IDProviderReference>
+    </exp:References>
+    <wsp:Policy xmlns:L7p="http://www.layer7tech.com/ws/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy">
+        <wsp:All wsp:Usage="Required">
+            <L7p:SslAssertion/>
+            <L7p:HttpBasic/>
+            <L7p:Authentication>
+                <L7p:IdentityProviderOid goidValue="0000000000000000fffffffffffffffe"/>
+            </L7p:Authentication>
+            <L7p:CustomizeErrorResponse>
+                <L7p:Content stringValue="Internal Error"/>
+            </L7p:CustomizeErrorResponse>
+            <L7p:SetVariable>
+                <L7p:Base64Expression stringValue="PGRpdj4NCjxoMT5TT0FQIHRvIFJFU1QgQ29udmVyc2lvbjwvaDE+DQoNCjxwPlRoZSBTT0FQIHRvIFJFU1QgY29udmVyc2lvbiBpcyBhIHRocmVlIHN0ZXAgcHJvY2VkdXJlLjwvcD4NCjxwPjxzcGFuIGNsYXNzPSJzdGVwMSI+U3RlcCAxOiBVcGxvYWQgeW91ciBXU0RMLiBUaGUgc2VydmljZSBpbmZvcm1hdGlvbiBhbmQgb3BlcmF0aW9ucyB3aWxsIGJlIGV4dHJhY3RlZC48L3NwYW4+DQo8YnIvPjxzcGFuIGNsYXNzPSJzdGVwMiI+U3RlcCAyOiBDb25maWd1cmUgdGhlIHNlcnZpY2UgZGV0YWlscy4gTW9kaWZ5IGFuZC9vciBjb3JyZWN0IHRoZSBzZXJ2aWNlIGluZm9ybWF0aW9uIGFuZCBzYW1wbGUgcmVxdWVzdHMgZm9yIGVhY2ggb3BlcmF0aW9uLjwvc3Bhbj4NCjxici8+PHNwYW4gY2xhc3M9InN0ZXAzIj5TdGVwIDM6IENyZWF0ZSBhIFJFU1Qgc2VydmljZSBvbiB0aGUgU2VjdXJlU3BhbiBHYXRld2F5Ljwvc3Bhbj48L3A+DQoNCjxzcGFuIGNsYXNzPSJ3c2RsVXBsb2FkRm9ybSI+DQo8cD5JbnN0cnVjdGlvbnM6IA0KVGhpcyBXU0RMIHRvIFJFU1QgY29udmVyc2lvbiBhc3N1bWVzIHRoZSBmb2xsb3dpbmcuDQo8b2w+DQo8bGk+VGhlIFdTREwgbXVzdCBiZSBhIHNlbGYgY29udGFpbmVkIGRvY3VtZW50LiBJbXBvcnRzL2luY2x1ZGVzIGFyZSBub3Qgc3VwcG9ydC48L2xpPg0KPGxpPk9ubHkgV1NETCAxLjEge2h0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzZGwvfSBhbmQgU09BUCAxLjEgYmluZGluZyB7aHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3NkbC9zb2FwL30gc3VwcG9ydGVkLjwvbGk+DQo8bGk+SWYgbW9yZSB0aGFuIDEgV1NETCBzZXJ2aWNlIGV4aXN0cywgb25seSB0aGUgZmlyc3QgZm91bmQgd2lsbCBiZSB1c2VkLjwvaT4NCjxsaT5JZiBtb3JlIHRoYW4gMSBXU0RMIGJpbmRpbmcgZXhpc3RzLCBvbmx5IHRoZSBmaXJzdCBmb3VuZCB3aWxsIGJlIHVzZWQuPC9pPg0KPGxpPklmIG1vcmUgdGhhbiAxIFdTREwgcG9ydFR5cGUgZXhpc3RzLCBvbmx5IHRoZSBmaXJzdCBmb3VuZCB3aWxsIGJlIHVzZWQuPC9pPg0KPGxpPk11bHRpcGxlIFdTREwgb3BlcmF0aW9ucyBhcmUgYWxsb3dlZC48L2xpPg0KPGxpPkRvY3VtZW50LWxpdGVyYWwgb25seTwvbGk+DQo8bGk+U2FtcGxlIHJlcXVlc3QgbWVzc2FnZXMgYXJlIGNyZWF0ZSBmb3IgZWFjaCBvcGVyYXRpb24gd2hpY2ggd2lsbCBleHRyYWN0IGFsbCBlbGVtZW50cy48L2xpPg0KPGxpPlNjaGVtYSAoWE1MIFNjaGVtYSAxLjEge2h0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hfSk8L2xpPg0KPHVsPg0KPGxpPk9wdGlvbmFsIGVsZW1lbnRzIGFyZSBhc3N1bWVkIHRvIGJlIHJlcXVpcmVkLjwvbGk+DQo8bGk+U3VwcG9ydGVkIHNjaGVtYSB0eXBlcyBhcmU6IGVsZW1lbnQsIHNpbXBsZVR5cGUsIGNvbXBsZXhUeXBlLCBzZXF1ZW5jZSwgY2hvaWNlLjwvbGk+DQo8L3VsPg0KPC9vbD4NCg0KPHA+VXBsb2FkIHlvdXIgV1NETCBiZWxvdy48L3A+DQo8Zm9ybSBuYW1lPSJ3c2RsRm9ybSIgYWN0aW9uPSIke3JlcXVlc3QudXJsLnBhdGh9IiBlbmN0eXBlPSJtdWx0aXBhcnQvZm9ybS1kYXRhIiBtZXRob2Q9InBvc3QiPg0KPGlucHV0IHR5cGU9ImZpbGUiIG5hbWU9IndzZGwiIHNpemU9IjEwMCI+PGJyLz4NCjxpbnB1dCB0eXBlPSJzdWJtaXQiIHZhbHVlPSJTdWJtaXQiIC8+DQo8L2Zvcm0+DQo8L3NwYW4+DQo8L2Rpdj4="/>
+                <L7p:VariableToSet stringValue="wsdlUploadTemplate"/>
+            </L7p:SetVariable>
+            <L7p:SetVariable>
+                <L7p:Base64Expression stringValue="L3NvYXBUb1Jlc3Q="/>
+                <L7p:VariableToSet stringValue="baseUrl"/>
+            </L7p:SetVariable>
+            <wsp:OneOrMore wsp:Usage="Required">
+                <wsp:All wsp:Usage="Required">
+                    <L7p:ComparisonAssertion>
+                        <L7p:Expression1 stringValue="${request.http.method}"/>
+                        <L7p:Expression2 stringValue="GET"/>
+                        <L7p:Predicates predicates="included">
+                            <L7p:item binary="included">
+                                <L7p:RightValue stringValue="GET"/>
+                            </L7p:item>
+                        </L7p:Predicates>
+                    </L7p:ComparisonAssertion>
+                    <L7p:ComparisonAssertion>
+                        <L7p:Expression1 stringValue="${request.url.path}"/>
+                        <L7p:Expression2 stringValue="${baseUrl}"/>
+                        <L7p:Predicates predicates="included">
+                            <L7p:item binary="included">
+                                <L7p:RightValue stringValue="${baseUrl}"/>
+                            </L7p:item>
+                        </L7p:Predicates>
+                    </L7p:ComparisonAssertion>
+                    <L7p:HardcodedResponse>
+                        <L7p:Base64ResponseBody stringValue="PGh0bWw+CjxoZWFkPgo8dGl0bGU+U09BUCB0byBSRVNUIENvbnZlcnNpb248L3RpdGxlPgo8c3R5bGU+Ci5zdGVwMSB7CmZvbnQtd2VpZ2h0OiBib2xkOwp9Cjwvc3R5bGU+CjwvaGVhZD4KPGJvZHk+CiR7d3NkbFVwbG9hZFRlbXBsYXRlfQo8L2JvZHk+CjwvaHRtbD4="/>
+                        <L7p:ResponseContentType stringValue="text/html; charset=UTF-8"/>
+                    </L7p:HardcodedResponse>
+                    <L7p:assertionComment>
+                        <L7p:Properties mapValue="included">
+                            <L7p:entry>
+                                <L7p:key stringValue="LEFT.COMMENT"/>
+                                <L7p:value stringValue="Step 1:"/>
+                            </L7p:entry>
+                            <L7p:entry>
+                                <L7p:key stringValue="RIGHT.COMMENT"/>
+                                <L7p:value stringValue="// initial page with form to upload WSDL"/>
+                            </L7p:entry>
+                        </L7p:Properties>
+                    </L7p:assertionComment>
+                </wsp:All>
+                <wsp:All wsp:Usage="Required">
+                    <L7p:CustomizeErrorResponse>
+                        <L7p:Content stringValue="WSDL Parse Error"/>
+                    </L7p:CustomizeErrorResponse>
+                    <L7p:ComparisonAssertion>
+                        <L7p:Expression1 stringValue="${request.http.method}"/>
+                        <L7p:Expression2 stringValue="POST"/>
+                        <L7p:Predicates predicates="included">
+                            <L7p:item binary="included">
+                                <L7p:RightValue stringValue="POST"/>
+                            </L7p:item>
+                        </L7p:Predicates>
+                    </L7p:ComparisonAssertion>
+                    <L7p:ComparisonAssertion>
+                        <L7p:Expression1 stringValue="${request.url.path}"/>
+                        <L7p:Expression2 stringValue="${baseUrl}"/>
+                        <L7p:Predicates predicates="included">
+                            <L7p:item binary="included">
+                                <L7p:RightValue stringValue="${baseUrl}"/>
+                            </L7p:item>
+                        </L7p:Predicates>
+                    </L7p:ComparisonAssertion>
+                    <L7p:ContentType>
+                        <L7p:ChangeContentType booleanValue="true"/>
+                        <L7p:MessagePart booleanValue="true"/>
+                        <L7p:NewContentTypeValue stringValue="text/xml"/>
+                    </L7p:ContentType>
+                    <wsp:OneOrMore wsp:Usage="Required">
+                        <wsp:All wsp:Usage="Required">
+                            <L7p:RequestXpathAssertion>
+                                <L7p:VariablePrefix stringValue="wsdl"/>
+                                <L7p:XpathExpression xpathExpressionValue="included">
+                                    <L7p:Expression stringValue="/wsdl:definitions"/>
+                                    <L7p:Namespaces mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="apachesoap"/>
+                                    <L7p:value stringValue="http://xml.apache.org/xml-soap"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="impl"/>
+                                    <L7p:value stringValue="http://warehouse.acme.com/ws"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="s"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/soap/envelope/"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="wsdl"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/wsdl/"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="xsd"/>
+                                    <L7p:value stringValue="http://www.w3.org/2001/XMLSchema"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="wsdlsoap"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="intf"/>
+                                    <L7p:value stringValue="http://warehouse.acme.com/ws"/>
+                                    </L7p:entry>
+                                    </L7p:Namespaces>
+                                </L7p:XpathExpression>
+                            </L7p:RequestXpathAssertion>
+                            <L7p:XslTransformation>
+                                <L7p:AssertionComment assertionComment="included">
+                                    <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Convert WSDL to XML template"/>
+                                    </L7p:entry>
+                                    </L7p:Properties>
+                                </L7p:AssertionComment>
+                                <L7p:ResourceInfo staticResourceInfo="included">
+                                    <L7p:Document stringValue="&lt;!-- Template to extract WSDL artifacts and create a template XML to potentially buildadditional pertinent artifacts. Some artifacts include1. Policy XML to create a REST service compatible with Layer7 SecureSpan Gateway2. WADL documentCreated by: Eurus Kim, Layer 7 TechnologiesDate: Sep 2013Assumptions made:1. Only 1 WSDL service (WSDL 1.1 {http://schemas.xmlsoap.org/wsdl/})2. Only 1 WSDL binding (SOAP 1.1 binding {http://schemas.xmlsoap.org/wsdl/soap/})3. Only 1 WSDL portType4. Multiple operations allowed5. Document-literal SOAP only6. Sample request messages are create for each operation which will extract all elements, including all optional elements7. Schema (XML Schema 1.1 {http://www.w3.org/2001/XMLSchema})&#x9;- Not all schema types are supported&#x9;- Supported are: element, complexType, sequence, choice&#x9;- Added support for custom complexTypes (Sep 2013), not all may be supported at this time-->&lt;xsl:stylesheet exclude-result-prefixes=&quot;wsdl wsdlsoap soap xs&quot; version=&quot;1.0&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:wsdl=&quot;http://schemas.xmlsoap.org/wsdl/&quot; xmlns:wsdlsoap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;>&#x9;&lt;xsl:output indent=&quot;yes&quot; method=&quot;xml&quot;/>&lt;!-- START DECLARE SOME VARIABLES -->&lt;!--$debugMode - Enable debug mode to output some comments&#x9;- options are 'on' or 'off'. On will output some comments in the stylesheet$nsPrefixDefault - Declare the namespace prefix to use for the input message elements$nsPrefixDynamic - Set whether you want to try the dynamic namespace creation-->&#x9;&lt;xsl:variable name=&quot;debugMode&quot; select=&quot;'off'&quot;/>&#x9;&lt;xsl:variable name=&quot;nsPrefixDefault&quot; select=&quot;'ns:'&quot;/>&#x9;&lt;xsl:variable name=&quot;nsPrefixDynamic&quot; select=&quot;'true'&quot;/>&lt;!-- END DECLARE SOME VARIABLES -->&lt;!-- WSDL DEFINITION TEMPLATE -->&#x9;&lt;xsl:template match=&quot;wsdl:definitions&quot;>&#x9;&#x9;&lt;xsl:variable name=&quot;serviceName&quot; select=&quot;wsdl:service/@name&quot;/>&#x9;&#x9;&lt;xsl:variable name=&quot;servicePortLocation&quot; select=&quot;wsdl:service/wsdl:port/wsdlsoap:address/@location&quot;/>&#x9;&#x9;&lt;xsl:variable name=&quot;baseUrl&quot; select=&quot;concat('/',substring-after(substring-after($servicePortLocation,'//'),'/'))&quot;/>&#x9;&lt;!-- START DEBUG INFO -->&#x9;&lt;xsl:if test=&quot;$debugMode = 'on'&quot;>&#x9;&lt;xsl:comment>Service Name: &lt;xsl:value-of select=&quot;$serviceName&quot;/>, Location: &lt;xsl:value-of select=&quot;$servicePortLocation&quot;/>&lt;/xsl:comment>&#x9;&lt;/xsl:if>&#x9;&lt;!-- END DEBUG INFO -->&#x9;&#x9;&lt;xsl:comment>/* TODO: Check the baseUrl that would be used for REST services on SSG. Make sure to have a trailing slash at the end. */&lt;/xsl:comment>&#x9;&#x9;&#x9;&lt;!-- Create the root level element -->&#x9;&#x9;&lt;wsdlToWadl baseUrl=&quot;{$baseUrl}&quot; json=&quot;Yes&quot; name=&quot;{$serviceName} REST to SOAP&quot; removeNamespace=&quot;Yes&quot; soapEndpoint=&quot;{$servicePortLocation}&quot;>&#x9;&#x9;&#x9;&#x9;&lt;!-- Only apply-templates for the WSDL operations to parse through and find the input message to create sample message -->&#x9;&#x9;&#x9;&lt;xsl:apply-templates select=&quot;wsdl:portType/wsdl:operation&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/wsdlToWadl>&#x9;&lt;/xsl:template>&#x9;&lt;!-- Templates for interrogating wsdl:operation data -->&#x9;&#x9;&lt;xsl:template match=&quot;wsdl:operation&quot;>&#x9;&#x9;&lt;xsl:variable name=&quot;opName&quot; select=&quot;@name&quot;/>&#x9;&#x9;&lt;xsl:variable name=&quot;soapAction&quot; select=&quot;/wsdl:definitions/wsdl:binding/wsdl:operation[@name=$opName]/wsdlsoap:operation/@soapAction&quot;/>&#x9;&lt;!-- START DEBUG INFO -->&#x9;&lt;xsl:if test=&quot;$debugMode = 'on'&quot;>&#x9;&lt;xsl:comment>Operation Name: &lt;xsl:value-of select=&quot;$opName&quot;/>, soapAction: &lt;xsl:value-of select=&quot;$soapAction&quot;/>&#x9;&lt;/xsl:comment>&#x9;&lt;/xsl:if>&#x9;&lt;!-- END DEBUG INFO -->&#x9;&#x9;&lt;!-- Find the wsdl:input/wsdl:message QNAME declared in the operation -->&#x9;&#x9;&lt;xsl:variable name=&quot;inputMessageQName&quot; select=&quot;./wsdl:input/@message&quot;/>&#x9;&lt;!-- Remove namespace prefix if included in the QNAME -->&#x9;&#x9;&lt;xsl:variable name=&quot;inputMessageName&quot;>&#x9;&#x9;&#x9;&lt;xsl:choose>&#x9;&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;contains($inputMessageQName,':')&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:value-of select=&quot;substring-after($inputMessageQName,':')&quot;/>&#x9;&#x9;&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&#x9;&#x9;&lt;xsl:otherwise>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:value-of select=&quot;$inputMessageQName&quot;/>&#x9;&#x9;&#x9;&#x9;&lt;/xsl:otherwise>&#x9;&#x9;&#x9;&lt;/xsl:choose>&#x9;&#x9;&lt;/xsl:variable>&#x9;&#x9;&#x9;&lt;!-- START DEBUG INFO -->&#x9;&#x9;&lt;xsl:if test=&quot;$debugMode = 'on'&quot;>&#x9;&lt;xsl:comment>Input Message = &lt;xsl:value-of select=&quot;$inputMessageName&quot;/>&lt;/xsl:comment>&#x9;&lt;/xsl:if>&#x9;&lt;!-- END DEBUG INFO -->&#x9;&lt;!-- Find the wsdl:part associated with the wsdl:input/wsdl:message -->&#x9;&#x9;&lt;xsl:variable name=&quot;inputWsdlPartQName&quot; select=&quot;/wsdl:definitions/wsdl:message[@name=$inputMessageName]/wsdl:part/@element&quot;/>&#x9;&lt;!-- Remove namespace prefix if included in the QNAME -->&#x9;&#x9;&lt;xsl:variable name=&quot;inputWsdlPartName&quot;>&#x9;&#x9;&#x9;&lt;xsl:choose>&#x9;&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;contains($inputWsdlPartQName,':')&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:value-of select=&quot;substring-after($inputWsdlPartQName,':')&quot;/>&#x9;&#x9;&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&#x9;&#x9;&lt;xsl:otherwise>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:value-of select=&quot;$inputWsdlPartQName&quot;/>&#x9;&#x9;&#x9;&#x9;&lt;/xsl:otherwise>&#x9;&#x9;&#x9;&lt;/xsl:choose>&#x9;&#x9;&lt;/xsl:variable>&#x9;&#x9;&#x9;&lt;!-- START DEBUG INFO -->&#x9;&lt;xsl:if test=&quot;$debugMode = 'on'&quot;>&#x9;&lt;xsl:comment>Input Part - &lt;xsl:value-of select=&quot;$inputWsdlPartName&quot;/>&lt;/xsl:comment>&#x9;&lt;/xsl:if>&#x9;&lt;!-- END DEBUG INFO -->&#x9;&lt;!-- Determine the best HTTP method to declare for operation -->&#x9;&#x9;&lt;xsl:variable name=&quot;opMethod&quot;>&#x9;&#x9;&lt;xsl:choose>&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;/wsdl:definitions/wsdl:types/xs:schema/xs:element[@name=$inputWsdlPartName]//xs:element&quot;>POST&lt;/xsl:when>&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;/wsdl:definitions/wsdl:types/xs:schema/xs:complexType[&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;@name = substring-after(/wsdl:definitions/wsdl:types/xs:schema/xs:element[@name=$inputWsdlPartName]/@type, ':')&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;]//xs:element&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;>POST&lt;/xsl:when>&#x9;&#x9;&#x9;&lt;xsl:otherwise>GET&lt;/xsl:otherwise>&#x9;&#x9;&lt;/xsl:choose>&#x9;&#x9;&lt;/xsl:variable>&#x9;&#x9;&#x9;&#x9;&lt;xsl:variable name=&quot;opParams&quot;>&#x9;&#x9;&lt;xsl:choose>&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;$opMethod='GET'&quot;>No&lt;/xsl:when>&#x9;&#x9;&#x9;&lt;xsl:otherwise>Yes&lt;/xsl:otherwise>&#x9;&#x9;&lt;/xsl:choose>&#x9;&#x9;&#x9;&#x9;&lt;/xsl:variable>&#x9;&#x9;&lt;!-- Create element to specify each operation -->&#x9;&#x9;&lt;operation method=&quot;{$opMethod}&quot; name=&quot;{@name}&quot; params=&quot;{$opParams}&quot; soapAction=&quot;{$soapAction}&quot;>&#x9;&#x9;&#x9;&lt;request>&#x9;&#x9;&#x9;&lt;soap:Envelope>&lt;soap:Body>&#x9;&#x9;&lt;!-- Create a sample message based on the schema element that matches the input message wsdl:part -->&#x9;&#x9;&#x9;&lt;xsl:apply-templates select=&quot;/wsdl:definitions/wsdl:types/xs:schema/xs:element[@name=$inputWsdlPartName]&quot;>&#x9;&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;type&quot; select=&quot;'input'&quot;/>&#x9;&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;elemForm&quot; select=&quot;/wsdl:definitions/wsdl:types/xs:schema/@elementFormDefault&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;tns&quot; select=&quot;/wsdl:definitions/wsdl:types/xs:schema/@targetNamespace&quot;/>&#x9;&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;baseElement&quot; select=&quot;true()&quot;/>&#x9;&#x9;&#x9;&lt;/xsl:apply-templates>&#x9;&#x9;&#x9;&lt;/soap:Body>&lt;/soap:Envelope>&#x9;&#x9;&#x9;&lt;/request>&#x9;&#x9;&lt;/operation>&#x9;&lt;/xsl:template>&lt;!-- Template for xs:element -->&#x9;&lt;xsl:template match=&quot;xs:element&quot;>&#x9;&#x9;&lt;xsl:param name=&quot;type&quot; select=&quot;''&quot;/>&#x9;&#x9;&lt;xsl:param name=&quot;elemForm&quot; select=&quot;'unqualified'&quot;/>&#x9;&#x9;&lt;xsl:param name=&quot;tns&quot; select=&quot;''&quot;/>&#x9;&#x9;&lt;xsl:param name=&quot;baseElement&quot; select=&quot;false()&quot;/>&#x9;&lt;!-- If the elementFormDefault is qualified, use the targetNamespace, &#x9;or potentially use the namespace for the element @ref or @type&#x9;-->&#x9;&#x9;&lt;xsl:variable name=&quot;ns&quot;>&#x9;&#x9;&#x9;&lt;xsl:if test=&quot;$elemForm='qualified' or $baseElement=true()&quot;>&#x9;&#x9;&#x9;&lt;xsl:choose>&#x9;&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;./@ref and contains(./@ref,':')&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:call-template name=&quot;get-ns-name&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;ns-prefix&quot; select=&quot;substring-before(./@ref,':')&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xsl:call-template>&#x9;&#x9;&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;./@type and contains(./@type,':') and not(starts-with(./@type,'xs:')) and not(starts-with(./@type,'xsd:'))&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:call-template name=&quot;get-ns-name&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;ns-prefix&quot; select=&quot;substring-before(./@type,':')&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xsl:call-template>&#x9;&#x9;&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&#x9;&#x9;&lt;xsl:otherwise>&lt;xsl:value-of select=&quot;$tns&quot;/>&lt;/xsl:otherwise>&#x9;&#x9;&#x9;&lt;/xsl:choose>&#x9;&#x9;&#x9;&lt;/xsl:if>&#x9;&#x9;&lt;/xsl:variable>&#x9;&#x9;&#x9;&lt;!-- Set the default namespace prefix to use -->&#x9;&#x9;&lt;xsl:variable name=&quot;nsPrefix&quot;>&#x9;&#x9;&#x9;&lt;xsl:choose>&#x9;&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;$nsPrefixDynamic = 'true' and starts-with($ns, 'http://')&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:value-of select=&quot;concat(substring-before(substring-after($ns, 'http://'), '.'),':')&quot;/>&#x9;&#x9;&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;$nsPrefixDynamic = 'true' and starts-with($ns, 'https://')&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:value-of select=&quot;concat(substring-before(substring-after($ns, 'https://'), '.'),':')&quot;/>&#x9;&#x9;&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;$nsPrefixDynamic = 'true' and contains($ns, '.')&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:value-of select=&quot;concat(substring-before($ns, '.'),':')&quot;/>&#x9;&#x9;&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;$nsPrefixDynamic = 'true' and contains($ns, ':')&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:value-of select=&quot;concat(substring-before($ns, ':'),':')&quot;/>&#x9;&#x9;&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&#x9;&#x9;&lt;xsl:otherwise>&lt;xsl:value-of select=&quot;$nsPrefixDefault&quot;/>&lt;/xsl:otherwise>&#x9;&#x9;&#x9;&lt;/xsl:choose>&#x9;&#x9;&lt;/xsl:variable>&#x9;&lt;!-- START DEBUG INFO -->&#x9;&#x9;&lt;xsl:if test=&quot;$debugMode = 'on'&quot;>&#x9;&lt;xsl:comment>the name attr = &lt;xsl:value-of select=&quot;./@name&quot;/>&#x9;the ref attr = &lt;xsl:value-of select=&quot;./@ref&quot;/>&#x9;&lt;/xsl:comment>&#x9;&lt;/xsl:if>&#x9;&lt;!-- END DEBUG INFO -->&#x9;&#x9;&#x9;&lt;!-- Set how to figure out the name of the element to use. It is most likely from @name, but can also come from @ref -->&#x9;&lt;xsl:variable name=&quot;elementName&quot;>&#x9;&#x9;&lt;xsl:choose>&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;./@name&quot;>&lt;xsl:value-of select=&quot;./@name&quot;/>&lt;/xsl:when>&#x9;&#x9;&#x9;&lt;xsl:otherwise>&#x9;&#x9;&#x9;&#x9;&lt;xsl:choose>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;contains(./@ref,':')&quot;>&lt;xsl:value-of select=&quot;substring-after(./@ref,':')&quot;/>&lt;/xsl:when>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:otherwise>&lt;xsl:value-of select=&quot;./@ref&quot;/>&lt;/xsl:otherwise>&#x9;&#x9;&#x9;&#x9;&lt;/xsl:choose>&#x9;&#x9;&#x9;&lt;/xsl:otherwise>&#x9;&#x9;&lt;/xsl:choose>&#x9;&lt;/xsl:variable>&#x9;&lt;!-- START DEBUG INFO -->&#x9;&#x9;&lt;xsl:if test=&quot;$debugMode = 'on'&quot;>&#x9;&lt;xsl:comment>elementName = &lt;xsl:value-of select=&quot;$elementName&quot;/>&lt;/xsl:comment>&#x9;&lt;/xsl:if>&#x9;&lt;!-- END DEBUG INFO -->&#x9;&lt;!-- XSD Elements can potentially use the @type or @ref for the next child element. Find which one to use. -->&#x9;&lt;xsl:variable name=&quot;typeOrRef&quot;>&#x9;&#x9;&lt;xsl:choose>&#x9;&#x9;&lt;xsl:when test=&quot;@type&quot;>&lt;xsl:value-of select=&quot;@type&quot;/>&lt;/xsl:when>&#x9;&#x9;&lt;xsl:when test=&quot;@ref&quot;>&#x9;&#x9;&#x9;&lt;xsl:choose>&#x9;&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;contains(./@ref,':')&quot;>&lt;xsl:value-of select=&quot;substring-after(./@ref,':')&quot;/>&lt;/xsl:when>&#x9;&#x9;&#x9;&#x9;&lt;xsl:otherwise>&lt;xsl:value-of select=&quot;./@ref&quot;/>&lt;/xsl:otherwise>&#x9;&#x9;&#x9;&lt;/xsl:choose>&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&lt;xsl:otherwise>&lt;/xsl:otherwise>&#x9;&#x9;&lt;/xsl:choose>&#x9;&lt;/xsl:variable>&#x9;&#x9;&lt;!-- START DEBUG INFO -->&#x9;&#x9;&lt;xsl:if test=&quot;$debugMode = 'on'&quot;>&#x9;&lt;xsl:comment>The typeOrRef &lt;xsl:value-of select=&quot;$typeOrRef&quot;/>&lt;/xsl:comment>&#x9;&lt;/xsl:if>&#x9;&lt;!-- END DEBUG INFO -->&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;!-- Create sample element -->&#x9;&#x9;&lt;xsl:choose>&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;$ns != ''&quot;>&#x9;&#x9;&#x9;&#x9;&lt;!--&lt;xsl:element name=&quot;{concat($nsPrefix,'testvalue')}&quot; namespace=&quot;{$ns}&quot;>-->&#x9;&#x9;&#x9;&#x9;&lt;xsl:element name=&quot;{concat($nsPrefix,$elementName)}&quot; namespace=&quot;{$ns}&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:choose>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;!-- Process the @type or @ref parameter -->&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;$typeOrRef != ''&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:call-template name=&quot;typeTemplate&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;type&quot; select=&quot;$typeOrRef&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;elemForm&quot; select=&quot;$elemForm&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;tns&quot; select=&quot;$tns&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xsl:call-template>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;!-- If the element has child elements, continue processing child elements -->&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:otherwise>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:apply-templates select=&quot;*&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;elemForm&quot; select=&quot;$elemForm&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;tns&quot; select=&quot;$tns&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xsl:apply-templates>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xsl:otherwise>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xsl:choose>&#x9;&#x9;&#x9;&#x9;&lt;/xsl:element>&#x9;&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&#x9;&lt;xsl:otherwise>&#x9;&#x9;&#x9;&#x9;&lt;xsl:element name=&quot;{@name}&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:choose>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;!-- Process the @type or @ref parameter -->&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;$typeOrRef != ''&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:call-template name=&quot;typeTemplate&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;type&quot; select=&quot;$typeOrRef&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;elemForm&quot; select=&quot;$elemForm&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;tns&quot; select=&quot;$tns&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xsl:call-template>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;!-- If the element has child elements, continue processing child elements -->&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:otherwise>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:apply-templates select=&quot;*&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;elemForm&quot; select=&quot;$elemForm&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;tns&quot; select=&quot;$tns&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xsl:apply-templates>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xsl:otherwise>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xsl:choose>&#x9;&#x9;&#x9;&#x9;&lt;/xsl:element>&#x9;&#x9;&#x9;&lt;/xsl:otherwise>&#x9;&#x9;&lt;/xsl:choose>&#x9;&lt;/xsl:template>&lt;!-- Template for processing the @type or @ref parameter-->&#x9;&lt;xsl:template name=&quot;typeTemplate&quot;>&#x9;&#x9;&lt;xsl:param name=&quot;type&quot; select=&quot;''&quot;/>&#x9;&#x9;&lt;xsl:param name=&quot;elemForm&quot; select=&quot;'unqualified'&quot;/>&#x9;&#x9;&#x9;&lt;xsl:param name=&quot;tns&quot; select=&quot;''&quot;/>&#x9;&#x9;&lt;!-- Find the namepsace for the element that is used -->&#x9;&#x9;&lt;xsl:variable name=&quot;elementNs&quot;>&#x9;&#x9;&#x9;&lt;xsl:choose>&#x9;&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;contains($type,':')&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:call-template name=&quot;get-ns-name&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;ns-prefix&quot; select=&quot;substring-before($type,':')&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xsl:call-template>&#x9;&#x9;&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&#x9;&#x9;&lt;xsl:otherwise>&lt;xsl:value-of select=&quot;$tns&quot;/>&lt;/xsl:otherwise>&#x9;&#x9;&#x9;&lt;/xsl:choose>&#x9;&#x9;&lt;/xsl:variable>&#x9;&#x9;&#x9;&#x9;&lt;xsl:choose>&#x9;&#x9;&lt;!-- If a simpleType (xs or xsd prefix) for the element is declared, use the simpleType as the sample element -->&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;starts-with($type, 'xs:') or starts-with($type, 'xsd:')&quot;>&#x9;&#x9;&#x9;&#x9;&lt;xsl:value-of select=&quot;$type&quot;/>&#x9;&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;!-- Else look for the local name of the type and see if there is a complex type by that name to process -->&#x9;&#x9;&#x9;&lt;xsl:otherwise>&#x9;&#x9;&#x9;&#x9;&lt;xsl:variable name=&quot;typeLocalName&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:choose>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;contains($type,':')&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:value-of select=&quot;substring-after($type, ':')&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:otherwise>&lt;xsl:value-of select=&quot;$type&quot;/>&lt;/xsl:otherwise>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xsl:choose>&#x9;&#x9;&#x9;&#x9;&lt;/xsl:variable>&#x9;&lt;!-- START DEBUG INFO -->&#x9;&#x9;&lt;xsl:if test=&quot;$debugMode = 'on'&quot;>&#x9;&lt;xsl:comment>Type name = &lt;xsl:value-of select=&quot;$type&quot;/>&lt;/xsl:comment>&#x9;&lt;xsl:comment>Type local name = &lt;xsl:value-of select=&quot;$typeLocalName&quot;/>&lt;/xsl:comment>&#x9;&lt;/xsl:if>&#x9;&lt;!-- END DEBUG INFO -->&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:apply-templates select=&quot;/wsdl:definitions/wsdl:types/xs:schema/xs:complexType[@name=$typeLocalName]&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;elemForm&quot; select=&quot;$elemForm&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;tns&quot; select=&quot;$elementNs&quot;/>&#x9;&#x9;&#x9;&#x9;&lt;/xsl:apply-templates>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xsl:otherwise>&#x9;&#x9;&lt;/xsl:choose>&#x9;&lt;/xsl:template>&#x9;&lt;!-- Template for xs:complexType, xs:simpleType, xs:sequence, and xs:choice&#x9;These do not output any values, but rather continue parsing through the schema to find elements.-->&#x9;&lt;xsl:template match=&quot;xs:complexType | xs:simpleType| xs:sequence | xs:choice&quot;>&#x9;&#x9;&lt;xsl:param name=&quot;elemForm&quot; select=&quot;'unqualified'&quot;/>&#x9;&#x9;&lt;xsl:param name=&quot;tns&quot; select=&quot;''&quot;/>&#x9;&#x9;&lt;xsl:apply-templates select=&quot;*&quot;>&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;elemForm&quot; select=&quot;$elemForm&quot;/>&#x9;&#x9;&#x9;&lt;xsl:with-param name=&quot;tns&quot; select=&quot;$tns&quot;/>&#x9;&#x9;&lt;/xsl:apply-templates>&#x9;&lt;/xsl:template>&lt;!-- Template for xs:restriction &#x9;Restriction typically has a base simpleType declared with specific enumeration or patterns. The base simpleType is used to output the sample request. -->&#x9;&lt;xsl:template match=&quot;xs:restriction&quot;>&#x9;&#x9;&lt;xsl:param name=&quot;elemForm&quot; select=&quot;'unqualified'&quot;/>&#x9;&#x9;&lt;xsl:param name=&quot;tns&quot; select=&quot;''&quot;/>&#x9;&#x9;&lt;xsl:value-of select=&quot;@base&quot;/>&#x9;&lt;/xsl:template>&lt;!-- get the namespace uri for the namespace identified by the prefix in the parameter -->&lt;xsl:template name=&quot;get-ns-name&quot;>&#x9;&lt;xsl:param name=&quot;ns-prefix&quot;/>&#x9;&lt;xsl:variable name=&quot;ns-node&quot; select=&quot;namespace::node()[local-name()=$ns-prefix]&quot;/>&#x9;&lt;xsl:value-of select=&quot;$ns-node&quot;/>&lt;/xsl:template>&#x9;&lt;/xsl:stylesheet>"/>
+                                </L7p:ResourceInfo>
+                                <L7p:TransformName stringValue=""/>
+                                <L7p:XsltVersion stringValue="1.0"/>
+                            </L7p:XslTransformation>
+                            <L7p:XslTransformation>
+                                <L7p:AssertionComment assertionComment="included">
+                                    <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Convert XML template to HTML form"/>
+                                    </L7p:entry>
+                                    </L7p:Properties>
+                                </L7p:AssertionComment>
+                                <L7p:ResourceInfo staticResourceInfo="included">
+                                    <L7p:Document stringValue="&lt;!-- Template to convert &lt;wsdlToWadl> template XML to HTML form to edit Created by: Eurus Kim, Layer 7 TechnologiesDate: March 2012-->&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;>&lt;xsl:output indent=&quot;yes&quot; method=&quot;html&quot;/>&lt;xsl:param name=&quot;gateway.cluster.hostname&quot; select=&quot;'ssg-host-name-or-ip'&quot;/>&lt;xsl:param name=&quot;request.url.path&quot; select=&quot;''&quot;/>&lt;xsl:template match=&quot;/&quot;>&#x9;&#x9;&#x9;&lt;form name=&quot;wsdlToWadl&quot; action=&quot;{$request.url.path}/create&quot; method=&quot;post&quot;>&#x9;&#x9;&#x9;&lt;h2>Modify the Service information below.&lt;/h2>&#x9;&#x9;&#x9;&#x9;&lt;xsl:apply-templates/>&#x9;&#x9;&#x9;&#x9;&lt;input name=&quot;Submit&quot; type=&quot;submit&quot; value=&quot;Create Service&quot;/>&#x9;&lt;/form>&lt;/xsl:template>&lt;xsl:template match=&quot;wsdlToWadl&quot;>&#x9;&lt;p>&lt;b>Service Name:&lt;/b>&lt;br/>&lt;input name=&quot;name&quot; size=&quot;80&quot; type=&quot;text&quot; value=&quot;{@name}&quot;/>&lt;/p>&#x9;&lt;p>&lt;b>REST Base URL:&lt;/b>&lt;br/>&#x9;Make sure the Base URL contains a leading slash, but no trailing slash (i.e. /test/url)&lt;br/>&#x9;http://&lt;xsl:value-of select=&quot;$gateway.cluster.hostname&quot;/>:8080&lt;input name=&quot;baseUrl&quot; size=&quot;50&quot; type=&quot;text&quot; value=&quot;{@baseUrl}&quot;/>&lt;/p>&#x9;&lt;p>&lt;b>SOAP Endpoint:&lt;/b>&lt;br/>&lt;input name=&quot;soapEndpoint&quot; size=&quot;80&quot; type=&quot;text&quot; value=&quot;{@soapEndpoint}&quot;/>&lt;/p>&#x9;&lt;p>&lt;b>Remove Namespaces from REST request:&lt;/b>&lt;br/>&#x9;This is only applicable to POST/PUT methods. The POST and PUT methods assume the request message will be the XML contained within the SOAP&#x9;Body. If selecting this option as Yes, the namespace for all elements will not be used for the REST request messages, and also removed&#x9;on response messages. When using GET or DELETE methods, any parameters will automatically be set as query string params with no namespace.&lt;br/>&#x9;&lt;select name=&quot;removeNamespace&quot; onChange=&quot;changeJsonOptions(this.selectedIndex)&quot;>&#x9;&#x9;&lt;xsl:element name=&quot;option&quot;>&#x9;&#x9;&#x9;&lt;xsl:attribute name=&quot;value&quot;>Yes&lt;/xsl:attribute>&#x9;&#x9;&#x9;&lt;xsl:if test=&quot;@removeNamespace='Yes'&quot;>&lt;xsl:attribute name=&quot;selected&quot;>selected&lt;/xsl:attribute>&lt;/xsl:if>&#x9;&#x9;&#x9;Yes&lt;/xsl:element>&#x9;&#x9;&lt;xsl:element name=&quot;option&quot;>&#x9;&#x9;&#x9;&lt;xsl:attribute name=&quot;value&quot;>No&lt;/xsl:attribute>&#x9;&#x9;&#x9;&lt;xsl:if test=&quot;@removeNamespace='No'&quot;>&lt;xsl:attribute name=&quot;selected&quot;>selected&lt;/xsl:attribute>&lt;/xsl:if>&#x9;&#x9;&#x9;No&lt;/xsl:element>&#x9;&lt;/select>&#x9;&lt;/p>&#x9;&lt;p>&lt;b>Accept JSON:&lt;/b>&lt;br/>&#x9;JSON option is only available when namespace removal is selected.&lt;br/>&#x9;&lt;select name=&quot;json&quot;>&#x9;&#x9;&lt;xsl:element name=&quot;option&quot;>&#x9;&#x9;&#x9;&lt;xsl:attribute name=&quot;value&quot;>Yes&lt;/xsl:attribute>&#x9;&#x9;&#x9;&lt;xsl:if test=&quot;@json='Yes'&quot;>&lt;xsl:attribute name=&quot;selected&quot;>selected&lt;/xsl:attribute>&lt;/xsl:if>&#x9;&#x9;&#x9;Yes&lt;/xsl:element>&#x9;&#x9;&lt;xsl:element name=&quot;option&quot;>&#x9;&#x9;&#x9;&lt;xsl:attribute name=&quot;value&quot;>No&lt;/xsl:attribute>&#x9;&#x9;&#x9;&lt;xsl:if test=&quot;@json='No'&quot;>&lt;xsl:attribute name=&quot;selected&quot;>selected&lt;/xsl:attribute>&lt;/xsl:if>&#x9;&#x9;&#x9;No&lt;/xsl:element>&#x9;&lt;/select>&#x9;&lt;/p>&#x9;&#x9;&lt;script type=&quot;text/javascript&quot;>&#x9;function changeJsonOptions(option) {&#x9;&#x9;if (option == 0) {&#x9;&#x9;document.wsdlToWadl.json.options.length=0;&#x9;&#x9;document.wsdlToWadl.json.options[0]=new Option(&quot;Yes&quot;, &quot;Yes&quot;, true, false);&#x9;&#x9;document.wsdlToWadl.json.options[1]=new Option(&quot;No&quot;, &quot;No&quot;, false, false);&#x9;&#x9;} else {&#x9;&#x9;document.wsdlToWadl.json.options.length=0;&#x9;&#x9;document.wsdlToWadl.json.options[0]=new Option(&quot;No&quot;, &quot;No&quot;, true, false);&#x9;&#x9;&#x9;&#x9;}&#x9;}&#x9;&#x9; function toggleDisplay(divID) {&#x9; var item = document.getElementById(divID);&#x9; if (item.style.display == &quot;block&quot;) item.style.display = &quot;none&quot;;&#x9;  else item.style.display = &quot;block&quot;;&#x9; }&#x9; &lt;/script> &#x9;&lt;b>Operations to include:&lt;/b>&#x9;&lt;xsl:for-each select=&quot;operation&quot;>&#x9;&lt;br/>&lt;input checked=&quot;checked&quot; name=&quot;operation&quot; onClick=&quot;toggleDisplay('{@name}');&quot; type=&quot;checkbox&quot; value=&quot;{@name}&quot;/> &lt;xsl:value-of select=&quot;@name&quot;/>&#x9;&lt;/xsl:for-each>&#x9;&#x9;&lt;xsl:apply-templates/>&#x9;&lt;/xsl:template>&lt;xsl:template match=&quot;operation&quot;>&#x9;&lt;div id=&quot;{@name}&quot; style=&quot;display:block;&quot;>&#x9;&lt;h3>Operation &quot;&lt;xsl:value-of select=&quot;@name&quot;/>&quot; Detail.&lt;/h3>&#x9;&lt;p>HTTP Method:&lt;br/>&#x9;&#x9;&lt;xsl:choose>&#x9;&#x9;&lt;xsl:when test=&quot;@params='No'&quot;>&#x9;&#x9;&lt;select name=&quot;{@name}method&quot;>&#x9;&#x9;&#x9;&lt;option value=&quot;GET&quot;>GET&lt;/option>&#x9;&#x9;&#x9;&lt;option value=&quot;DELETE&quot;>DELETE&lt;/option>&#x9;&#x9;&#x9;&lt;option value=&quot;POST&quot;>POST&lt;/option>&#x9;&#x9;&#x9;&lt;option value=&quot;PUT&quot;>PUT&lt;/option>&#x9;&#x9;&lt;/select>&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&#x9;&lt;xsl:otherwise>&#x9;&#x9;&lt;select name=&quot;{@name}method&quot;>&#x9;&#x9;&#x9;&lt;xsl:element name=&quot;option&quot;>&#x9;&#x9;&#x9;&#x9;&lt;xsl:attribute name=&quot;value&quot;>GET&lt;/xsl:attribute>&#x9;&#x9;&#x9;&#x9;&lt;xsl:if test=&quot;@method='GET'&quot;>&lt;xsl:attribute name=&quot;selected&quot;>selected&lt;/xsl:attribute>&lt;/xsl:if>&#x9;&#x9;&#x9;&#x9;GET&lt;/xsl:element>&#x9;&#x9;&#x9;&lt;xsl:element name=&quot;option&quot;>&#x9;&#x9;&#x9;&#x9;&lt;xsl:attribute name=&quot;value&quot;>PUT&lt;/xsl:attribute>&#x9;&#x9;&#x9;&#x9;&lt;xsl:if test=&quot;@method='PUT'&quot;>&lt;xsl:attribute name=&quot;selected&quot;>selected&lt;/xsl:attribute>&lt;/xsl:if>&#x9;&#x9;&#x9;&#x9;PUT&lt;/xsl:element>&#x9;&#x9;&#x9;&lt;xsl:element name=&quot;option&quot;>&#x9;&#x9;&#x9;&#x9;&lt;xsl:attribute name=&quot;value&quot;>POST&lt;/xsl:attribute>&#x9;&#x9;&#x9;&#x9;&lt;xsl:if test=&quot;@method='POST'&quot;>&lt;xsl:attribute name=&quot;selected&quot;>selected&lt;/xsl:attribute>&lt;/xsl:if>&#x9;&#x9;&#x9;&#x9;POST&lt;/xsl:element>&#x9;&#x9;&#x9;&lt;xsl:element name=&quot;option&quot;>&#x9;&#x9;&#x9;&#x9;&lt;xsl:attribute name=&quot;value&quot;>DELETE&lt;/xsl:attribute>&#x9;&#x9;&#x9;&#x9;&lt;xsl:if test=&quot;@method='DELETE'&quot;>&lt;xsl:attribute name=&quot;selected&quot;>selected&lt;/xsl:attribute>&lt;/xsl:if>&#x9;&#x9;&#x9;&#x9;DELETE&lt;/xsl:element>&#x9;&#x9;&lt;/select>&#x9;&#x9;&lt;/xsl:otherwise>&#x9;&lt;/xsl:choose>&#x9;&lt;/p>&#x9;&lt;p>SOAP Action:&lt;br/>&lt;input name=&quot;{@name}soapAction&quot; size=&quot;80&quot; type=&quot;text&quot; value=&quot;{@soapAction}&quot;/>&lt;/p>&#x9;&#x9;&lt;p>Request Sample:&lt;br/>&lt;textarea cols=&quot;60&quot; name=&quot;{@name}request&quot; rows=&quot;10&quot;>&lt;xsl:copy-of select=&quot;request/*&quot;/>&lt;/textarea>&lt;/p>&#x9;&#x9;&lt;input name=&quot;{@name}params&quot; type=&quot;hidden&quot; value=&quot;{@params}&quot;/>&#x9;&lt;/div>&lt;/xsl:template>&lt;/xsl:stylesheet>"/>
+                                </L7p:ResourceInfo>
+                                <L7p:TransformName stringValue=""/>
+                            </L7p:XslTransformation>
+                            <L7p:HardcodedResponse>
+                                <L7p:Base64ResponseBody stringValue="PGh0bWw+CjxoZWFkPgo8dGl0bGU+U09BUCB0byBSRVNUIENvbnZlcnNpb246IFN0ZXAgMjwvdGl0bGU+CjxzdHlsZT4KLnN0ZXAyIHsKZm9udC13ZWlnaHQ6IGJvbGQ7Cn0KLndzZGxVcGxvYWRGb3JtIHsKZGlzcGxheTogbm9uZTsKfQo8L3N0eWxlPgo8L2hlYWQ+Cjxib2R5Pgoke3dzZGxVcGxvYWRUZW1wbGF0ZX0KJHtyZXF1ZXN0Lm1haW5wYXJ0fQo8L2JvZHk+CjwvaHRtbD4="/>
+                                <L7p:ResponseContentType stringValue="text/html; charset=UTF-8"/>
+                            </L7p:HardcodedResponse>
+                            <L7p:assertionComment>
+                                <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// check if file is wsdl, if yes tranform file"/>
+                                    </L7p:entry>
+                                </L7p:Properties>
+                            </L7p:assertionComment>
+                        </wsp:All>
+                        <wsp:All wsp:Usage="Required">
+                            <L7p:SetVariable>
+                                <L7p:Base64Expression stringValue="PHA+PGZvbnQgY29sb3I9InJlZCI+VGhlIGZpbGUgeW91IHVwbG9hZGVkIGlzIG5vdCBhIFdTREwgb3IgZm9ybWF0dGVkIGluY29ycmVjdGx5LiBQbGVhc2UgdHJ5IGFnYWluLjwvZm9udD48L3A+"/>
+                                <L7p:VariableToSet stringValue="errorMessage"/>
+                            </L7p:SetVariable>
+                            <L7p:HardcodedResponse>
+                                <L7p:Base64ResponseBody stringValue="PGh0bWw+CjxoZWFkPgo8dGl0bGU+U09BUCB0byBSRVNUIENvbnZlcnNpb248L3RpdGxlPgo8c3R5bGU+Ci5zdGVwMSB7CmZvbnQtd2VpZ2h0OiBib2xkOwp9Cjwvc3R5bGU+CjwvaGVhZD4KPGJvZHk+CiR7d3NkbFVwbG9hZFRlbXBsYXRlfQoke2Vycm9yTWVzc2FnZX0KPC9ib2R5Pgo8L2h0bWw+"/>
+                                <L7p:ResponseContentType stringValue="text/html; charset=UTF-8"/>
+                            </L7p:HardcodedResponse>
+                            <L7p:assertionComment>
+                                <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// file is not a wsdl. return wsdl upload template with error"/>
+                                    </L7p:entry>
+                                </L7p:Properties>
+                            </L7p:assertionComment>
+                        </wsp:All>
+                    </wsp:OneOrMore>
+                    <L7p:assertionComment>
+                        <L7p:Properties mapValue="included">
+                            <L7p:entry>
+                                <L7p:key stringValue="LEFT.COMMENT"/>
+                                <L7p:value stringValue="Step 2:"/>
+                            </L7p:entry>
+                            <L7p:entry>
+                                <L7p:key stringValue="RIGHT.COMMENT"/>
+                                <L7p:value stringValue="// post of WSDL"/>
+                            </L7p:entry>
+                        </L7p:Properties>
+                    </L7p:assertionComment>
+                </wsp:All>
+                <wsp:All wsp:Usage="Required">
+                    <L7p:CustomizeErrorResponse>
+                        <L7p:Content stringValue="Service Detail Parse Error"/>
+                        <L7p:ExtraHeaders nameValuePairArray="included"/>
+                    </L7p:CustomizeErrorResponse>
+                    <L7p:ComparisonAssertion>
+                        <L7p:Expression1 stringValue="${request.http.method}"/>
+                        <L7p:Expression2 stringValue="POST"/>
+                        <L7p:Predicates predicates="included">
+                            <L7p:item binary="included">
+                                <L7p:RightValue stringValue="POST"/>
+                            </L7p:item>
+                        </L7p:Predicates>
+                    </L7p:ComparisonAssertion>
+                    <L7p:ComparisonAssertion>
+                        <L7p:Expression1 stringValue="${request.url.path}"/>
+                        <L7p:Expression2 stringValue="${baseUrl}/create"/>
+                        <L7p:Predicates predicates="included">
+                            <L7p:item binary="included">
+                                <L7p:RightValue stringValue="${baseUrl}/create"/>
+                            </L7p:item>
+                        </L7p:Predicates>
+                    </L7p:ComparisonAssertion>
+                    <L7p:AuditDetailAssertion>
+                        <L7p:Detail stringValue="reqXml: ${reqXml.mainpart}"/>
+                    </L7p:AuditDetailAssertion>
+                    <wsp:All wsp:Usage="Required">
+                        <L7p:Split>
+                            <L7p:InputVariable stringValue="request.mainPart"/>
+                            <L7p:OutputVariable stringValue="reqSplit"/>
+                            <L7p:SplitPattern stringValue="&amp;"/>
+                        </L7p:Split>
+                        <L7p:SetVariable>
+                            <L7p:Base64Expression stringValue="PHJlcXVlc3Q+"/>
+                            <L7p:VariableToSet stringValue="reqXmlString"/>
+                        </L7p:SetVariable>
+                        <L7p:ForEachLoop L7p:Usage="Required"
+                            loopVariable="reqSplit" variablePrefix="foreach">
+                            <L7p:Regex>
+                                <L7p:AutoTarget booleanValue="false"/>
+                                <L7p:CaptureVar stringValue="param"/>
+                                <L7p:OtherTargetMessageVariable stringValue="foreach.current"/>
+                                <L7p:Regex stringValue="(.{1,100})\=(.*)"/>
+                                <L7p:Replacement stringValue=""/>
+                                <L7p:Target target="OTHER"/>
+                            </L7p:Regex>
+                            <L7p:SetVariable>
+                                <L7p:Base64Expression stringValue="JHtwYXJhbVsxXX0="/>
+                                <L7p:VariableToSet stringValue="paramName"/>
+                            </L7p:SetVariable>
+                            <L7p:SetVariable>
+                                <L7p:Base64Expression stringValue="JHtwYXJhbVsyXX0="/>
+                                <L7p:VariableToSet stringValue="paramValue"/>
+                            </L7p:SetVariable>
+                            <L7p:EncodeDecode>
+                                <L7p:SourceVariableName stringValue="paramValue"/>
+                                <L7p:TargetDataType variableDataType="string"/>
+                                <L7p:TargetVariableName stringValue="paramValueDecoded"/>
+                                <L7p:TransformType transformType="URL_DECODE"/>
+                            </L7p:EncodeDecode>
+                            <L7p:SetVariable>
+                                <L7p:Base64Expression stringValue="JHtyZXFYbWxTdHJpbmd9DQo8cGFyYW0gbmFtZT0iJHtwYXJhbU5hbWV9Ij4ke3BhcmFtVmFsdWVEZWNvZGVkfTwvcGFyYW0+"/>
+                                <L7p:VariableToSet stringValue="reqXmlString"/>
+                            </L7p:SetVariable>
+                        </L7p:ForEachLoop>
+                        <L7p:SetVariable>
+                            <L7p:Base64Expression stringValue="JHtyZXFYbWxTdHJpbmd9DQo8L3JlcXVlc3Q+"/>
+                            <L7p:VariableToSet stringValue="reqXmlString"/>
+                        </L7p:SetVariable>
+                        <L7p:SetVariable>
+                            <L7p:Base64Expression stringValue="JHtyZXFYbWxTdHJpbmd9"/>
+                            <L7p:ContentType stringValue="text/xml; charset=utf-8"/>
+                            <L7p:DataType variableDataType="message"/>
+                            <L7p:VariableToSet stringValue="reqXml"/>
+                        </L7p:SetVariable>
+                        <L7p:XslTransformation>
+                            <L7p:AssertionComment assertionComment="included">
+                                <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Convert HTML POST back to XML template"/>
+                                    </L7p:entry>
+                                </L7p:Properties>
+                            </L7p:AssertionComment>
+                            <L7p:Direction intValue="-1"/>
+                            <L7p:OtherTargetMessageVariable stringValue="reqXml"/>
+                            <L7p:ResourceInfo staticResourceInfo="included">
+                                <L7p:Document stringValue="&lt;!-- Template to convert &lt;wsdlToWadl> HTML Form POST back to wsdlToWadl templateCreated by: Eurus Kim, Layer 7 TechnologiesDate: March 2012-->&#x9;&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;>&lt;xsl:output method=&quot;xml&quot; indent=&quot;yes&quot;/>&lt;xsl:param name=&quot;gateway.cluster.hostname&quot; select=&quot;'ssg-host-name-or-ip'&quot;/>&lt;xsl:param name=&quot;request.url.path&quot; select=&quot;''&quot;/>&lt;xsl:template match=&quot;request&quot;>&#x9;&lt;wsdlToWadl baseUrl=&quot;{param[@name='baseUrl']}&quot; name=&quot;{param[@name='name']}&quot; &#x9;soapEndpoint=&quot;{param[@name='soapEndpoint']}&quot; removeNamespace=&quot;{param[@name='removeNamespace']}&quot;&#x9;json=&quot;{param[@name='json']}&quot;>  &lt;xsl:for-each select=&quot;param[@name='operation']&quot;>&#x9;&lt;xsl:variable name=&quot;methodParam&quot; select=&quot;concat(text(),'method')&quot;/>&#x9;&lt;xsl:variable name=&quot;soapActionParam&quot; select=&quot;concat(text(),'soapAction')&quot;/>&#x9;&lt;xsl:variable name=&quot;paramsParam&quot; select=&quot;concat(text(),'params')&quot;/>&#x9;&lt;xsl:variable name=&quot;requestParam&quot; select=&quot;concat(text(),'request')&quot;/>&#x9;&#x9;&#x9;&lt;operation name=&quot;{text()}&quot; method=&quot;{/request/param[@name=$methodParam]}&quot; &#x9;soapAction=&quot;{/request/param[@name=$soapActionParam]}&quot; params=&quot;{/request/param[@name=$paramsParam]}&quot;>    &lt;request>      &lt;xsl:copy-of select=&quot;/request/param[@name=$requestParam]/*&quot;/>    &lt;/request>  &lt;/operation>   &lt;/xsl:for-each>  &lt;/wsdlToWadl> &lt;/xsl:template>&lt;/xsl:stylesheet>"/>
+                            </L7p:ResourceInfo>
+                            <L7p:Target target="OTHER"/>
+                            <L7p:TransformName stringValue=""/>
+                        </L7p:XslTransformation>
+                        <L7p:assertionComment>
+                            <L7p:Properties mapValue="included">
+                                <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Convert input HTML POST to XML as variable ${reqXml}"/>
+                                </L7p:entry>
+                            </L7p:Properties>
+                        </L7p:assertionComment>
+                    </wsp:All>
+                    <L7p:ResponseXpathAssertion>
+                        <L7p:AssertionComment assertionComment="included">
+                            <L7p:Properties mapValue="included">
+                                <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Extract parameter to check if namespaces will be used for request messages"/>
+                                </L7p:entry>
+                            </L7p:Properties>
+                        </L7p:AssertionComment>
+                        <L7p:VariablePrefix stringValue="removeNamespace"/>
+                        <L7p:XmlMsgSrc stringValue="reqXml"/>
+                        <L7p:XpathExpression xpathExpressionValue="included">
+                            <L7p:Expression stringValue="/wsdlToWadl/@removeNamespace"/>
+                            <L7p:Namespaces mapValue="included">
+                                <L7p:entry>
+                                    <L7p:key stringValue="ns"/>
+                                    <L7p:value stringValue="http://warehouse.acme.com/ws"/>
+                                </L7p:entry>
+                                <L7p:entry>
+                                    <L7p:key stringValue="s"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/soap/envelope/"/>
+                                </L7p:entry>
+                                <L7p:entry>
+                                    <L7p:key stringValue="soap"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                                </L7p:entry>
+                            </L7p:Namespaces>
+                        </L7p:XpathExpression>
+                    </L7p:ResponseXpathAssertion>
+                    <L7p:ResponseXpathAssertion>
+                        <L7p:VariablePrefix stringValue="serviceName"/>
+                        <L7p:XmlMsgSrc stringValue="reqXml"/>
+                        <L7p:XpathExpression xpathExpressionValue="included">
+                            <L7p:Expression stringValue="/wsdlToWadl/@name"/>
+                            <L7p:Namespaces mapValue="included">
+                                <L7p:entry>
+                                    <L7p:key stringValue="ns"/>
+                                    <L7p:value stringValue="http://warehouse.acme.com/ws"/>
+                                </L7p:entry>
+                                <L7p:entry>
+                                    <L7p:key stringValue="s"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/soap/envelope/"/>
+                                </L7p:entry>
+                                <L7p:entry>
+                                    <L7p:key stringValue="soap"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                                </L7p:entry>
+                            </L7p:Namespaces>
+                        </L7p:XpathExpression>
+                    </L7p:ResponseXpathAssertion>
+                    <L7p:ResponseXpathAssertion>
+                        <L7p:VariablePrefix stringValue="serviceJson"/>
+                        <L7p:XmlMsgSrc stringValue="reqXml"/>
+                        <L7p:XpathExpression xpathExpressionValue="included">
+                            <L7p:Expression stringValue="/wsdlToWadl/@json"/>
+                            <L7p:Namespaces mapValue="included">
+                                <L7p:entry>
+                                    <L7p:key stringValue="ns"/>
+                                    <L7p:value stringValue="http://warehouse.acme.com/ws"/>
+                                </L7p:entry>
+                                <L7p:entry>
+                                    <L7p:key stringValue="s"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/soap/envelope/"/>
+                                </L7p:entry>
+                                <L7p:entry>
+                                    <L7p:key stringValue="soap"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                                </L7p:entry>
+                            </L7p:Namespaces>
+                        </L7p:XpathExpression>
+                    </L7p:ResponseXpathAssertion>
+                    <L7p:ResponseXpathAssertion>
+                        <L7p:VariablePrefix stringValue="serviceBaseUrl"/>
+                        <L7p:XmlMsgSrc stringValue="reqXml"/>
+                        <L7p:XpathExpression xpathExpressionValue="included">
+                            <L7p:Expression stringValue="/wsdlToWadl/@baseUrl"/>
+                            <L7p:Namespaces mapValue="included">
+                                <L7p:entry>
+                                    <L7p:key stringValue="ns"/>
+                                    <L7p:value stringValue="http://warehouse.acme.com/ws"/>
+                                </L7p:entry>
+                                <L7p:entry>
+                                    <L7p:key stringValue="s"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/soap/envelope/"/>
+                                </L7p:entry>
+                                <L7p:entry>
+                                    <L7p:key stringValue="soap"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                                </L7p:entry>
+                            </L7p:Namespaces>
+                        </L7p:XpathExpression>
+                    </L7p:ResponseXpathAssertion>
+                    <L7p:ResponseXpathAssertion>
+                        <L7p:VariablePrefix stringValue="serviceSoapEndpoint"/>
+                        <L7p:XmlMsgSrc stringValue="reqXml"/>
+                        <L7p:XpathExpression xpathExpressionValue="included">
+                            <L7p:Expression stringValue="/wsdlToWadl/@soapEndpoint"/>
+                            <L7p:Namespaces mapValue="included">
+                                <L7p:entry>
+                                    <L7p:key stringValue="ns"/>
+                                    <L7p:value stringValue="http://warehouse.acme.com/ws"/>
+                                </L7p:entry>
+                                <L7p:entry>
+                                    <L7p:key stringValue="s"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/soap/envelope/"/>
+                                </L7p:entry>
+                                <L7p:entry>
+                                    <L7p:key stringValue="soap"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                                </L7p:entry>
+                            </L7p:Namespaces>
+                        </L7p:XpathExpression>
+                    </L7p:ResponseXpathAssertion>
+                    <wsp:All wsp:Usage="Required">
+                        <L7p:SetVariable>
+                            <L7p:Base64Expression stringValue="JHtyZXFYbWwubWFpblBhcnR9"/>
+                            <L7p:ContentType stringValue="text/xml; charset=utf-8"/>
+                            <L7p:DataType variableDataType="message"/>
+                            <L7p:VariableToSet stringValue="htmlDoc"/>
+                        </L7p:SetVariable>
+                        <L7p:XslTransformation>
+                            <L7p:AssertionComment assertionComment="included">
+                                <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Convert XML template to HTML Doc"/>
+                                    </L7p:entry>
+                                </L7p:Properties>
+                            </L7p:AssertionComment>
+                            <L7p:Direction intValue="-1"/>
+                            <L7p:OtherTargetMessageVariable stringValue="htmlDoc"/>
+                            <L7p:ResourceInfo staticResourceInfo="included">
+                                <L7p:Document stringValue="&lt;!-- Template to convert &lt;wsdlToWadl> template to HTML docCreated by: Eurus Kim, Layer 7 TechnologiesDate: March 2012-->&#x9;&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&#x9;>&lt;xsl:output method=&quot;html&quot; indent=&quot;yes&quot;/>&lt;xsl:param name=&quot;gateway.cluster.hostname&quot; select=&quot;'ssg-host-name-or-ip'&quot;/>&lt;xsl:template match=&quot;/&quot;>&#x9;&#x9;&#x9;&lt;xsl:apply-templates />&#x9;&#x9;&lt;/xsl:template>&lt;xsl:template match=&quot;wsdlToWadl&quot;>&#x9;&lt;h2>Sample documentation on generated REST/SOAP proxy service&lt;/h2>&#x9;&lt;xsl:apply-templates />&#x9;&#x9;&lt;hr/>&#x9;&lt;/xsl:template>&lt;xsl:template match=&quot;operation&quot;>&#x9;&lt;div id=&quot;{@name}&quot;>&#x9;&lt;h3>Operation &quot;&lt;xsl:value-of select=&quot;@name&quot;/>&quot; Detail.&lt;/h3>&#x9;&lt;xsl:choose>&#x9;&#x9;&lt;xsl:when test=&quot;@method='POST' or @method='PUT'&quot;>&#x9;&#x9;&#x9;&lt;p>Request URL: http://&lt;xsl:value-of select=&quot;$gateway.cluster.hostname&quot;/>:8080&lt;xsl:value-of select=&quot;/wsdlToWadl/@baseUrl&quot;/>/&lt;xsl:value-of select=&quot;@name&quot;/>&lt;/p>&#x9;&#x9;&#x9;&lt;p>HTTP Method: &lt;b>&lt;xsl:value-of select=&quot;@method&quot;/>&lt;/b>&lt;/p>&#x9;&#x9;&#x9;&lt;p>&lt;b>XML Request Sample:&lt;/b>&lt;br/>&#x9;&#x9;&#x9;Content-Type: application/xml&lt;br/>&#x9;&#x9;&#x9;&lt;pre>&lt;xsl:apply-templates select=&quot;request/*&quot; mode=&quot;convertToString&quot;/>&lt;/pre>&#x9;&#x9;&#x9;&lt;/p>&#x9;&#x9;&#x9;&lt;xsl:if test=&quot;/wsdlToWadl/@json='Yes'&quot;>&#x9;&#x9;&#x9;&lt;p>&lt;b>JSON Request Sample:&lt;/b>&lt;br/>&#x9;&#x9;&#x9;Content-Type: application/json&lt;br/>&#x9;&#x9;&#x9;&lt;pre>&lt;xsl:text>{&amp;#10; &lt;/xsl:text>&lt;xsl:apply-templates select=&quot;request/*&quot; mode=&quot;convertToStringJson&quot;/>&lt;xsl:text>}&lt;/xsl:text>&lt;/pre>&#x9;&#x9;&#x9;&lt;/p>&#x9;&#x9;&#x9;&lt;/xsl:if>&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&lt;xsl:when test=&quot;@params='Yes'&quot;>&#x9;&#x9;&#x9;&lt;p>Request URL: http://&lt;xsl:value-of select=&quot;$gateway.cluster.hostname&quot;/>:8080&lt;xsl:value-of select=&quot;/wsdlToWadl/@baseUrl&quot;/>/&lt;xsl:value-of select=&quot;@name&quot;/>?&lt;xsl:apply-templates select=&quot;request/*&quot; mode=&quot;convertToStringQuery&quot;/>&lt;/p>&#x9;&#x9;&#x9;&lt;p>HTTP Method: &lt;b>&lt;xsl:value-of select=&quot;@method&quot;/>&lt;/b>&lt;/p>&#x9;&#x9;&#x9;&lt;p>Query String Parameters:&#x9;&#x9;&#x9;&lt;xsl:apply-templates select=&quot;request/*&quot; mode=&quot;convertToStringGET&quot;/>&#x9;&#x9;&#x9;&lt;/p>&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&lt;xsl:otherwise>&#x9;&#x9;&#x9;&lt;p>Request URL: http://&lt;xsl:value-of select=&quot;$gateway.cluster.hostname&quot;/>:8080&lt;xsl:value-of select=&quot;/wsdlToWadl/@baseUrl&quot;/>/&lt;xsl:value-of select=&quot;@name&quot;/>&lt;/p>&#x9;&#x9;&#x9;&lt;p>HTTP Method: &lt;b>&lt;xsl:value-of select=&quot;@method&quot;/>&lt;/b>&lt;/p>&#x9;&#x9;&lt;/xsl:otherwise>&#x9;&lt;/xsl:choose>&#x9;&#x9;&lt;/div>&lt;/xsl:template>&lt;!-- XML parameters template -->&lt;xsl:template match=&quot;*&quot; mode=&quot;convertToString&quot;>&#x9;&lt;xsl:if test=&quot;not(preceding-sibling::*)&quot;>&lt;xsl:text>&amp;#10;&lt;/xsl:text>&lt;/xsl:if>&#x9;&lt;xsl:if test=&quot;local-name(parent::*)!='Body'&quot;>&lt;xsl:text>  &lt;/xsl:text>&lt;/xsl:if>&#x9;&lt;xsl:choose>&#x9;&#x9;&lt;xsl:when test=&quot;/wsdlToWadl/@removeNamespace='No' and local-name(..)='Body'&quot;>&#x9;&#x9;&#x9;&lt;xsl:text>&amp;lt;&lt;/xsl:text>&lt;xsl:value-of select=&quot;local-name()&quot;/> xmlns=&quot;&lt;xsl:value-of select=&quot;namespace-uri()&quot;/>&quot;&lt;xsl:text>&amp;gt;&lt;/xsl:text>&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&lt;xsl:otherwise>&#x9;&#x9;&#x9;&lt;xsl:text>&amp;lt;&lt;/xsl:text>&lt;xsl:value-of select=&quot;local-name()&quot;/>&lt;xsl:text>&amp;gt;&lt;/xsl:text>&#x9;&#x9;&lt;/xsl:otherwise>&#x9;&lt;/xsl:choose>&#x9;&#x9;&lt;xsl:apply-templates mode=&quot;convertToString&quot;/>&#x9;&lt;xsl:text>&amp;lt;/&lt;/xsl:text>&lt;xsl:value-of select=&quot;local-name()&quot;/>&lt;xsl:text>&amp;gt;&amp;#10;&lt;/xsl:text>&#x9;&#x9;&lt;/xsl:template>&lt;xsl:template match=&quot;*[namespace-uri()='http://schemas.xmlsoap.org/soap/envelope/']&quot; mode=&quot;convertToString&quot;>&#x9;&lt;xsl:apply-templates mode=&quot;convertToString&quot;/>&lt;/xsl:template>&lt;xsl:template match=&quot;@*|text()&quot; mode=&quot;convertToString&quot;>&#x9;&lt;xsl:if test=&quot;normalize-space(.)!=''&quot;>&lt;xsl:value-of select=&quot;normalize-space(.)&quot;/>&lt;/xsl:if>&lt;/xsl:template>&lt;!-- JSON parameters template -->&lt;xsl:template match=&quot;*&quot; mode=&quot;convertToStringJson&quot;>&#x9;&lt;xsl:text>&quot;&lt;/xsl:text>&lt;xsl:value-of select=&quot;local-name()&quot;/>&lt;xsl:text>&quot;:&lt;/xsl:text>&#x9;&#x9;&lt;xsl:choose>&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;./*&quot;>&#x9;&#x9;&#x9;&#x9;&lt;xsl:text>&amp;#10; {&amp;#10; &lt;/xsl:text>&lt;xsl:apply-templates mode=&quot;convertToStringJson&quot;/>&lt;xsl:text>&amp;#10; }&amp;#10;&lt;/xsl:text>&#x9;&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&#x9;&lt;xsl:otherwise>&#x9;&#x9;&#x9;&#x9;&lt;xsl:apply-templates mode=&quot;convertToStringJson&quot;/>&#x9;&#x9;&#x9;&#x9;&lt;xsl:if test=&quot;following-sibling::*&quot;>,&amp;#10; &lt;/xsl:if>&#x9;&#x9;&#x9;&lt;/xsl:otherwise>&#x9;&#x9;&lt;/xsl:choose>&lt;/xsl:template>&lt;xsl:template match=&quot;*[namespace-uri()='http://schemas.xmlsoap.org/soap/envelope/']&quot; mode=&quot;convertToStringJson&quot;>&#x9;&lt;xsl:apply-templates mode=&quot;convertToStringJson&quot;/>&lt;/xsl:template>&lt;xsl:template match=&quot;@*|text()&quot; mode=&quot;convertToStringJson&quot;>&#x9;&lt;xsl:if test=&quot;normalize-space(.)!=''&quot;>&#x9;&#x9;&lt;xsl:text>&quot;&lt;/xsl:text>&lt;xsl:value-of select=&quot;normalize-space(.)&quot;/>&lt;xsl:text>&quot;&lt;/xsl:text>&#x9;&lt;/xsl:if>&lt;/xsl:template>&lt;!-- HTTP GET parameters template -->&lt;xsl:template match=&quot;*&quot; mode=&quot;convertToStringGET&quot;>&#x9;&lt;xsl:choose>&#x9;&#x9;&lt;xsl:when test=&quot;./*&quot;>&#x9;&#x9;&#x9;&lt;xsl:apply-templates mode=&quot;convertToStringGET&quot;/>&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&lt;xsl:otherwise>&#x9;&#x9;&#x9;&lt;br/>&lt;b>&lt;xsl:value-of select=&quot;local-name()&quot;/>&lt;/b> - type: &lt;xsl:value-of select=&quot;text()&quot;/>&#x9;&#x9;&lt;/xsl:otherwise>&#x9;&lt;/xsl:choose>&lt;/xsl:template>&lt;xsl:template match=&quot;*[namespace-uri()='http://schemas.xmlsoap.org/soap/envelope/']&quot; mode=&quot;convertToStringGET&quot;>&#x9;&lt;xsl:apply-templates mode=&quot;convertToStringGET&quot;/>&lt;/xsl:template>&lt;!-- HTTP GET query string template -->&lt;xsl:template match=&quot;*&quot; mode=&quot;convertToStringQuery&quot;>&#x9;&lt;xsl:choose>&#x9;&#x9;&lt;xsl:when test=&quot;./*&quot;>&#x9;&#x9;&#x9;&lt;xsl:apply-templates mode=&quot;convertToStringQuery&quot;/>&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&lt;xsl:otherwise>&#x9;&#x9;&#x9;&lt;xsl:value-of select=&quot;local-name()&quot;/>&lt;xsl:text>=&lt;/xsl:text>&#x9;&#x9;&#x9;&lt;xsl:apply-templates mode=&quot;convertToStringQuery&quot;/>&#x9;&#x9;&#x9;&lt;xsl:if test=&quot;following-sibling::*&quot;>&amp;amp;&lt;/xsl:if>&#x9;&#x9;&lt;/xsl:otherwise>&#x9;&lt;/xsl:choose>&lt;/xsl:template>&lt;xsl:template match=&quot;*[namespace-uri()='http://schemas.xmlsoap.org/soap/envelope/']&quot; mode=&quot;convertToStringQuery&quot;>&#x9;&lt;xsl:apply-templates mode=&quot;convertToStringQuery&quot;/>&lt;/xsl:template>&lt;xsl:template match=&quot;@*|text()&quot; mode=&quot;convertToStringQuery&quot;>&#x9;&lt;xsl:if test=&quot;normalize-space(.)!=''&quot;>&#x9;&#x9;&lt;xsl:text>{&lt;/xsl:text>&lt;xsl:value-of select=&quot;normalize-space(.)&quot;/>&lt;xsl:text>}&lt;/xsl:text>&#x9;&lt;/xsl:if>&lt;/xsl:template>&lt;/xsl:stylesheet>"/>
+                            </L7p:ResourceInfo>
+                            <L7p:Target target="OTHER"/>
+                            <L7p:TransformName stringValue=""/>
+                        </L7p:XslTransformation>
+                        <L7p:EncodeDecode>
+                            <L7p:SourceVariableName stringValue="htmlDoc.mainPart"/>
+                            <L7p:TargetDataType variableDataType="string"/>
+                            <L7p:TargetVariableName stringValue="htmlDocEncoded"/>
+                            <L7p:TransformType transformType="BASE64_ENCODE"/>
+                        </L7p:EncodeDecode>
+                        <L7p:SetVariable>
+                            <L7p:Base64Expression stringValue="JHtyZXFYbWwubWFpblBhcnR9"/>
+                            <L7p:ContentType stringValue="text/xml; charset=utf-8"/>
+                            <L7p:DataType variableDataType="message"/>
+                            <L7p:VariableToSet stringValue="wadl"/>
+                        </L7p:SetVariable>
+                        <L7p:XslTransformation>
+                            <L7p:AssertionComment assertionComment="included">
+                                <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Convert XML template to WADL"/>
+                                    </L7p:entry>
+                                </L7p:Properties>
+                            </L7p:AssertionComment>
+                            <L7p:Direction intValue="-1"/>
+                            <L7p:OtherTargetMessageVariable stringValue="wadl"/>
+                            <L7p:ResourceInfo staticResourceInfo="included">
+                                <L7p:Document stringValue="&lt;!-- Template to convert &lt;wsdlToWadl> template to a WADLCreated by: Eurus Kim, Layer 7 TechnologiesDate: March 3, 2012-->&#x9;&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&#x9;xmlns=&quot;http://wadl.dev.java.net/2009/02&quot;>&lt;xsl:output method=&quot;xml&quot; indent=&quot;yes&quot;/>&lt;xsl:param name=&quot;gateway.cluster.hostname&quot; select=&quot;'ssg-host-name-or-ip'&quot;/>&lt;xsl:template match=&quot;/&quot;>&#x9;&#x9;&#x9;&lt;xsl:apply-templates />&#x9;&#x9;&lt;/xsl:template>&lt;xsl:template match=&quot;wsdlToWadl&quot;>&#x9;&lt;application>&#x9;&lt;doc title=&quot;{@name}&quot;/>&#x9;&#x9;&lt;xsl:variable name=&quot;baseUrl&quot; select=&quot;concat(&#x9;&#x9;'http://',&#x9;&#x9;$gateway.cluster.hostname,&#x9;&#x9;':8080',&#x9;&#x9;@baseUrl,&#x9;&#x9;'/')&quot;/>   &#x9;&lt;resources base=&quot;{$baseUrl}&quot;>&#x9;&#x9;&lt;xsl:apply-templates />&#x9;&lt;/resources>&#x9;&lt;/application>&#x9;&lt;/xsl:template>&lt;xsl:template match=&quot;operation&quot;>&#x9;&lt;resource path=&quot;{@name}&quot; id=&quot;{@name}&quot;>&#x9;&#x9;&lt;doc title=&quot;{@name}&quot;/>&#x9;&#x9;&lt;method name=&quot;{@method}&quot; id=&quot;{@name}&quot;>&#x9;&#x9;&#x9;&lt;request>&#x9;&#x9;&#x9;&#x9;&lt;xsl:choose>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;@method='POST' or @method='PUT'&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;representation mediaType=&quot;application/xml&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:if test=&quot;/wsdlToWadl/@json='Yes'&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;representation mediaType=&quot;application/json&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xsl:if>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;@method='DELETE' and @params='Yes'&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:apply-templates select=&quot;request/*&quot; mode=&quot;convertToStringGET&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:when test=&quot;@method='GET' and @params='Yes'&quot;>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:apply-templates select=&quot;request/*&quot; mode=&quot;convertToStringGET&quot;/>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:otherwise/>&#x9;&#x9;&#x9;&#x9;&lt;/xsl:choose>&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/request>&#x9;&#x9;&lt;/method>&#x9;&lt;/resource>&lt;/xsl:template>&lt;xsl:template match=&quot;*&quot; mode=&quot;convertToStringGET&quot;>&#x9;&lt;xsl:choose>&#x9;&#x9;&lt;xsl:when test=&quot;./*&quot;>&#x9;&#x9;&#x9;&lt;xsl:apply-templates mode=&quot;convertToStringGET&quot;/>&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&lt;xsl:otherwise>&#x9;&#x9;&#x9;&lt;param name=&quot;{local-name()}&quot; &#x9;&#x9;&#x9;&#x9;style=&quot;query&quot; required=&quot;true&quot;/>&#x9;&#x9;&lt;/xsl:otherwise>&#x9;&lt;/xsl:choose>&lt;/xsl:template>&lt;xsl:template match=&quot;*[namespace-uri()='http://schemas.xmlsoap.org/soap/envelope/']&quot; mode=&quot;convertToStringGET&quot;>&#x9;&lt;xsl:apply-templates mode=&quot;convertToStringGET&quot;/>&lt;/xsl:template>&lt;/xsl:stylesheet>"/>
+                            </L7p:ResourceInfo>
+                            <L7p:Target target="OTHER"/>
+                            <L7p:TransformName stringValue=""/>
+                        </L7p:XslTransformation>
+                        <L7p:EncodeDecode>
+                            <L7p:SourceVariableName stringValue="wadl.mainPart"/>
+                            <L7p:TargetDataType variableDataType="string"/>
+                            <L7p:TargetVariableName stringValue="wadlEncoded"/>
+                            <L7p:TransformType transformType="BASE64_ENCODE"/>
+                        </L7p:EncodeDecode>
+                        <L7p:assertionComment>
+                            <L7p:Properties mapValue="included">
+                                <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Create Sample Documentation and WADL"/>
+                                </L7p:entry>
+                            </L7p:Properties>
+                        </L7p:assertionComment>
+                    </wsp:All>
+                    <L7p:ResponseXpathAssertion>
+                        <L7p:AssertionComment assertionComment="included">
+                            <L7p:Properties mapValue="included">
+                                <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Find all operations"/>
+                                </L7p:entry>
+                            </L7p:Properties>
+                        </L7p:AssertionComment>
+                        <L7p:VariablePrefix stringValue="op"/>
+                        <L7p:XmlMsgSrc stringValue="reqXml"/>
+                        <L7p:XpathExpression xpathExpressionValue="included">
+                            <L7p:Expression stringValue="/wsdlToWadl/operation"/>
+                            <L7p:Namespaces mapValue="included">
+                                <L7p:entry>
+                                    <L7p:key stringValue="ns"/>
+                                    <L7p:value stringValue="http://warehouse.acme.com/ws"/>
+                                </L7p:entry>
+                                <L7p:entry>
+                                    <L7p:key stringValue="s"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/soap/envelope/"/>
+                                </L7p:entry>
+                                <L7p:entry>
+                                    <L7p:key stringValue="soap"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                                </L7p:entry>
+                            </L7p:Namespaces>
+                        </L7p:XpathExpression>
+                    </L7p:ResponseXpathAssertion>
+                    <wsp:All wsp:Usage="Required">
+                        <L7p:SetVariable>
+                            <L7p:AssertionComment assertionComment="included">
+                                <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Policy XML Prefix"/>
+                                    </L7p:entry>
+                                </L7p:Properties>
+                            </L7p:AssertionComment>
+                            <L7p:Base64Expression stringValue="PHdzcDpQb2xpY3kgeG1sbnM6TDdwPSJodHRwOi8vd3d3LmxheWVyN3RlY2guY29tL3dzL3BvbGljeSIgeG1sbnM6d3NwPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDAyLzEyL3BvbGljeSI+DQo8d3NwOkFsbCB3c3A6VXNhZ2U9IlJlcXVpcmVkIj4NCjxMN3A6Q29tbWVudEFzc2VydGlvbj4NCgk8TDdwOkNvbW1lbnQgc3RyaW5nVmFsdWU9IiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMiLz4NCjwvTDdwOkNvbW1lbnRBc3NlcnRpb24+DQo8TDdwOkNvbW1lbnRBc3NlcnRpb24+DQoJPEw3cDpDb21tZW50IHN0cmluZ1ZhbHVlPSJUaGlzIGlzIGEgc2ltcGxlIGdlbmVyYXRlZCBwb2xpY3kgdGhhdCBpcyBhIFJFU1QgcmVwcmVzZW50YXRpb24gb2YgYSBTT0FQIHNlcnZpY2UiLz4NCjwvTDdwOkNvbW1lbnRBc3NlcnRpb24+DQo8TDdwOkNvbW1lbnRBc3NlcnRpb24+DQoJPEw3cDpDb21tZW50IHN0cmluZ1ZhbHVlPSJBZGRpdGlvbmFsIG1ldGhvZHMgY2FuIGJlIGFkZGVkLCBzdWNoIGFzIGFkZGluZyBhY2Nlc3MgY29udHJvbCBhbmQgbWVzc2FnZSB2YWxpZGF0aW9uIi8+DQo8L0w3cDpDb21tZW50QXNzZXJ0aW9uPg0KPEw3cDpDb21tZW50QXNzZXJ0aW9uPg0KCTxMN3A6Q29tbWVudCBzdHJpbmdWYWx1ZT0iU2FtcGxlIEhUTUwgZG9jdW1lbnRhdGlvbiBhbmQgV0FETCBhcmUgcHJvdmlkZWQgYXMgZGlzYWJsZWQgY29udGV4dCB2YXJpYWJsZXMgYmVsb3cuIi8+DQo8L0w3cDpDb21tZW50QXNzZXJ0aW9uPg0KPEw3cDpTZXRWYXJpYWJsZT4NCgk8TDdwOkFzc2VydGlvbkNvbW1lbnQgYXNzZXJ0aW9uQ29tbWVudD0iaW5jbHVkZWQiPg0KCQk8TDdwOlByb3BlcnRpZXMgbWFwVmFsdWU9ImluY2x1ZGVkIj4NCgkJCTxMN3A6ZW50cnk+DQoJCQkJPEw3cDprZXkgc3RyaW5nVmFsdWU9IlJJR0hULkNPTU1FTlQiLz4NCgkJCQk8TDdwOnZhbHVlIHN0cmluZ1ZhbHVlPSIvLyBTZXJ2aWNlIERvY3VtZW50YXRpb24gSFRNTCIvPg0KCQkJPC9MN3A6ZW50cnk+DQoJCTwvTDdwOlByb3BlcnRpZXM+DQoJPC9MN3A6QXNzZXJ0aW9uQ29tbWVudD4NCgk8TDdwOkJhc2U2NEV4cHJlc3Npb24gc3RyaW5nVmFsdWU9IiR7aHRtbERvY0VuY29kZWR9Ii8+DQogICAgICAgIDxMN3A6RW5hYmxlZCBib29sZWFuVmFsdWU9ImZhbHNlIi8+DQoJPEw3cDpWYXJpYWJsZVRvU2V0IHN0cmluZ1ZhbHVlPSJzZXJ2aWNlRG9jdW1lbnRhdGlvbkh0bWwiLz4NCjwvTDdwOlNldFZhcmlhYmxlPg0KPEw3cDpTZXRWYXJpYWJsZT4NCgk8TDdwOkFzc2VydGlvbkNvbW1lbnQgYXNzZXJ0aW9uQ29tbWVudD0iaW5jbHVkZWQiPg0KCQk8TDdwOlByb3BlcnRpZXMgbWFwVmFsdWU9ImluY2x1ZGVkIj4NCgkJCTxMN3A6ZW50cnk+DQoJCQkJPEw3cDprZXkgc3RyaW5nVmFsdWU9IlJJR0hULkNPTU1FTlQiLz4NCgkJCQk8TDdwOnZhbHVlIHN0cmluZ1ZhbHVlPSIvLyBTZXJ2aWNlIFdBREwiLz4NCgkJCTwvTDdwOmVudHJ5Pg0KCQk8L0w3cDpQcm9wZXJ0aWVzPg0KCTwvTDdwOkFzc2VydGlvbkNvbW1lbnQ+DQogICAgICAgIDxMN3A6RW5hYmxlZCBib29sZWFuVmFsdWU9ImZhbHNlIi8+DQoJPEw3cDpCYXNlNjRFeHByZXNzaW9uIHN0cmluZ1ZhbHVlPSIke3dhZGxFbmNvZGVkfSIvPg0KCTxMN3A6VmFyaWFibGVUb1NldCBzdHJpbmdWYWx1ZT0ic2VydmljZVdhZGwiLz4NCjwvTDdwOlNldFZhcmlhYmxlPg0KPEw3cDpDb21tZW50QXNzZXJ0aW9uPg0KCTxMN3A6Q29tbWVudCBzdHJpbmdWYWx1ZT0iIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyIvPg0KPC9MN3A6Q29tbWVudEFzc2VydGlvbj4NCjx3c3A6T25lT3JNb3JlIHdzcDpVc2FnZT0iUmVxdWlyZWQiPg=="/>
+                            <L7p:VariableToSet stringValue="policyXml"/>
+                        </L7p:SetVariable>
+                        <L7p:ForEachLoop L7p:Usage="Required"
+                            loopVariable="op.elements" variablePrefix="foreach">
+                            <L7p:SetVariable>
+                                <L7p:Base64Expression stringValue="JHtmb3JlYWNoLmN1cnJlbnR9"/>
+                                <L7p:ContentType stringValue="text/xml; charset=utf-8"/>
+                                <L7p:DataType variableDataType="message"/>
+                                <L7p:VariableToSet stringValue="operation"/>
+                            </L7p:SetVariable>
+                            <L7p:ResponseXpathAssertion>
+                                <L7p:VariablePrefix stringValue="opName"/>
+                                <L7p:XmlMsgSrc stringValue="operation"/>
+                                <L7p:XpathExpression xpathExpressionValue="included">
+                                    <L7p:Expression stringValue="/operation/@name"/>
+                                    <L7p:Namespaces mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="ns"/>
+                                    <L7p:value stringValue="http://warehouse.acme.com/ws"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="s"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/soap/envelope/"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="soap"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                                    </L7p:entry>
+                                    </L7p:Namespaces>
+                                </L7p:XpathExpression>
+                            </L7p:ResponseXpathAssertion>
+                            <L7p:ResponseXpathAssertion>
+                                <L7p:VariablePrefix stringValue="opSoapAction"/>
+                                <L7p:XmlMsgSrc stringValue="operation"/>
+                                <L7p:XpathExpression xpathExpressionValue="included">
+                                    <L7p:Expression stringValue="/operation/@soapAction"/>
+                                    <L7p:Namespaces mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="ns"/>
+                                    <L7p:value stringValue="http://warehouse.acme.com/ws"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="s"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/soap/envelope/"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="soap"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                                    </L7p:entry>
+                                    </L7p:Namespaces>
+                                </L7p:XpathExpression>
+                            </L7p:ResponseXpathAssertion>
+                            <L7p:ResponseXpathAssertion>
+                                <L7p:AssertionComment assertionComment="included">
+                                    <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Are there parameters in the request?"/>
+                                    </L7p:entry>
+                                    </L7p:Properties>
+                                </L7p:AssertionComment>
+                                <L7p:VariablePrefix stringValue="opParams"/>
+                                <L7p:XmlMsgSrc stringValue="operation"/>
+                                <L7p:XpathExpression xpathExpressionValue="included">
+                                    <L7p:Expression stringValue="/operation/@params"/>
+                                    <L7p:Namespaces mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="ns"/>
+                                    <L7p:value stringValue="http://warehouse.acme.com/ws"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="s"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/soap/envelope/"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="soap"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                                    </L7p:entry>
+                                    </L7p:Namespaces>
+                                </L7p:XpathExpression>
+                            </L7p:ResponseXpathAssertion>
+                            <L7p:ResponseXpathAssertion>
+                                <L7p:AssertionComment assertionComment="included">
+                                    <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Extract the HTTP Method to be used"/>
+                                    </L7p:entry>
+                                    </L7p:Properties>
+                                </L7p:AssertionComment>
+                                <L7p:VariablePrefix stringValue="opMethod"/>
+                                <L7p:XmlMsgSrc stringValue="operation"/>
+                                <L7p:XpathExpression xpathExpressionValue="included">
+                                    <L7p:Expression stringValue="/operation/@method"/>
+                                    <L7p:Namespaces mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="ns"/>
+                                    <L7p:value stringValue="http://warehouse.acme.com/ws"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="s"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/soap/envelope/"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="soap"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                                    </L7p:entry>
+                                    </L7p:Namespaces>
+                                </L7p:XpathExpression>
+                            </L7p:ResponseXpathAssertion>
+                            <L7p:EncodeDecode>
+                                <L7p:SourceVariableName stringValue="opSoapAction.result"/>
+                                <L7p:TargetDataType variableDataType="string"/>
+                                <L7p:TargetVariableName stringValue="opSoapActionEncoded"/>
+                                <L7p:TransformType transformType="BASE64_ENCODE"/>
+                            </L7p:EncodeDecode>
+                            <L7p:SetVariable>
+                                <L7p:Base64Expression stringValue="JHtwb2xpY3lYbWx9DQo8d3NwOkFsbCB3c3A6VXNhZ2U9IlJlcXVpcmVkIj4NCgk8TDdwOkNvbXBhcmlzb25Bc3NlcnRpb24+DQoJCTxMN3A6RXhwcmVzc2lvbjEgc3RyaW5nVmFsdWU9IiYjMzY7e3JlcXVlc3QuaHR0cC5tZXRob2R9Ii8+DQoJCTxMN3A6RXhwcmVzc2lvbjIgc3RyaW5nVmFsdWU9IiR7b3BNZXRob2QucmVzdWx0fSIvPg0KCQk8TDdwOlByZWRpY2F0ZXMgcHJlZGljYXRlcz0iaW5jbHVkZWQiPg0KCQkJPEw3cDppdGVtIGJpbmFyeT0iaW5jbHVkZWQiPg0KCQkJCTxMN3A6UmlnaHRWYWx1ZSBzdHJpbmdWYWx1ZT0iJHtvcE1ldGhvZC5yZXN1bHR9Ii8+DQoJCQk8L0w3cDppdGVtPg0KCQk8L0w3cDpQcmVkaWNhdGVzPg0KCTwvTDdwOkNvbXBhcmlzb25Bc3NlcnRpb24+DQoJPEw3cDpDb21wYXJpc29uQXNzZXJ0aW9uPg0KCQk8TDdwOkV4cHJlc3Npb24xIHN0cmluZ1ZhbHVlPSImIzM2O3tyZXF1ZXN0LnVybC5wYXRofSIvPg0KCQk8TDdwOkV4cHJlc3Npb24yIHN0cmluZ1ZhbHVlPSIvJHtvcE5hbWUucmVzdWx0fSIvPg0KCQk8TDdwOk9wZXJhdG9yIG9wZXJhdG9yPSJDT05UQUlOUyIvPg0KCQk8TDdwOlByZWRpY2F0ZXMgcHJlZGljYXRlcz0iaW5jbHVkZWQiPg0KCQkJPEw3cDppdGVtIGJpbmFyeT0iaW5jbHVkZWQiPg0KCQkJCTxMN3A6T3BlcmF0b3Igb3BlcmF0b3I9IkNPTlRBSU5TIi8+DQoJCQkJPEw3cDpSaWdodFZhbHVlIHN0cmluZ1ZhbHVlPSIvJHtvcE5hbWUucmVzdWx0fSIvPg0KCQkJPC9MN3A6aXRlbT4NCgkJPC9MN3A6UHJlZGljYXRlcz4NCgk8L0w3cDpDb21wYXJpc29uQXNzZXJ0aW9uPg0KCTxMN3A6U2V0VmFyaWFibGU+DQoJCTxMN3A6QmFzZTY0RXhwcmVzc2lvbiBzdHJpbmdWYWx1ZT0iJHtvcFNvYXBBY3Rpb25FbmNvZGVkfSIvPg0KCQk8TDdwOlZhcmlhYmxlVG9TZXQgc3RyaW5nVmFsdWU9InNvYXBBY3Rpb24iLz4NCgk8L0w3cDpTZXRWYXJpYWJsZT4="/>
+                                <L7p:VariableToSet stringValue="policyXml"/>
+                            </L7p:SetVariable>
+                            <wsp:OneOrMore wsp:Usage="Required">
+                                <wsp:All wsp:Usage="Required">
+                                    <L7p:ComparisonAssertion>
+                                    <L7p:Expression1 stringValue="${opParams.result}"/>
+                                    <L7p:Expression2 stringValue="Yes"/>
+                                    <L7p:Predicates predicates="included">
+                                    <L7p:item binary="included">
+                                    <L7p:RightValue stringValue="Yes"/>
+                                    </L7p:item>
+                                    </L7p:Predicates>
+                                    </L7p:ComparisonAssertion>
+                                    <wsp:OneOrMore wsp:Usage="Required">
+                                    <wsp:All wsp:Usage="Required">
+                                    <wsp:OneOrMore wsp:Usage="Required">
+                                    <L7p:ComparisonAssertion>
+                                    <L7p:Expression1 stringValue="${opMethod.result}"/>
+                                    <L7p:Expression2 stringValue="GET"/>
+                                    <L7p:Predicates predicates="included">
+                                    <L7p:item binary="included">
+
+                                    <L7p:RightValue stringValue="GET"/>
+                                    </L7p:item>
+                                    </L7p:Predicates>
+                                    </L7p:ComparisonAssertion>
+                                    <L7p:ComparisonAssertion>
+                                    <L7p:Expression1 stringValue="${opMethod.result}"/>
+                                    <L7p:Expression2 stringValue="DELETE"/>
+                                    <L7p:Predicates predicates="included">
+                                    <L7p:item binary="included">
+
+                                    <L7p:RightValue stringValue="DELETE"/>
+                                    </L7p:item>
+                                    </L7p:Predicates>
+                                    </L7p:ComparisonAssertion>
+                                    </wsp:OneOrMore>
+                                    <L7p:SetVariable>
+                                    <L7p:Base64Expression stringValue="JHtmb3JlYWNoLmN1cnJlbnR9"/>
+                                    <L7p:ContentType stringValue="text/xml; charset=utf-8"/>
+                                    <L7p:DataType variableDataType="message"/>
+                                    <L7p:VariableToSet stringValue="soapMsg"/>
+                                    </L7p:SetVariable>
+                                    <L7p:XslTransformation>
+                                    <L7p:Direction intValue="-1"/>
+
+                                    <L7p:OtherTargetMessageVariable stringValue="soapMsg"/>
+                                    <L7p:ResourceInfo staticResourceInfo="included">
+                                    <L7p:Document stringValue="&lt;!-- Template to tranform operation request from &lt;wsdlToWadl> templateCreated by: Eurus Kim, Layer 7 TechnologiesDate: March 3, 2012-->&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;>&lt;xsl:output indent=&quot;no&quot; method=&quot;xml&quot;/>&lt;xsl:template match=&quot;operation | request&quot;>&#x9;&lt;xsl:apply-templates/>&lt;/xsl:template>&lt;xsl:template match=&quot;*&quot;>&#x9;&lt;xsl:choose>&#x9;&#x9;&lt;xsl:when test=&quot;./*&quot;>&#x9;&#x9;&#x9;&lt;xsl:copy>&#x9;&#x9;&#x9;&#x9;&lt;xsl:apply-templates/>&#x9;&#x9;&#x9;&lt;/xsl:copy>&#x9;&#x9;&lt;/xsl:when>&#x9;&#x9;&lt;xsl:otherwise>&#x9;&#x9;&#x9;&lt;xsl:copy>&amp;#36;{request.http.parameter.&lt;xsl:value-of select=&quot;local-name()&quot;/>}&lt;/xsl:copy>&#x9;&#x9;&lt;/xsl:otherwise>&#x9;&lt;/xsl:choose>&lt;/xsl:template>&lt;xsl:template match=&quot;@*&quot;>&#x9;&lt;xsl:copy>&#x9;&#x9;&lt;xsl:apply-templates/>&#x9;&lt;/xsl:copy>&lt;/xsl:template>&lt;/xsl:stylesheet>"/>
+                                    </L7p:ResourceInfo>
+                                    <L7p:Target target="OTHER"/>
+                                    <L7p:TransformName stringValue=""/>
+                                    </L7p:XslTransformation>
+                                    <L7p:EncodeDecode>
+                                    <L7p:SourceVariableName stringValue="soapMsg.mainPart"/>
+                                    <L7p:TargetDataType variableDataType="string"/>
+                                    <L7p:TargetVariableName stringValue="soapMsgEncoded"/>
+                                    <L7p:TransformType transformType="BASE64_ENCODE"/>
+                                    </L7p:EncodeDecode>
+                                    <L7p:SetVariable>
+                                    <L7p:Base64Expression stringValue="JHtwb2xpY3lYbWx9DQoJPEw3cDpTZXRWYXJpYWJsZT4NCgkJPEw3cDpCYXNlNjRFeHByZXNzaW9uIHN0cmluZ1ZhbHVlPSIke3NvYXBNc2dFbmNvZGVkfSIvPg0KCQk8TDdwOkNvbnRlbnRUeXBlIHN0cmluZ1ZhbHVlPSJ0ZXh0L3htbDsgY2hhcnNldD11dGYtOCIvPg0KCQk8TDdwOkRhdGFUeXBlIHZhcmlhYmxlRGF0YVR5cGU9Im1lc3NhZ2UiLz4NCgkJPEw3cDpWYXJpYWJsZVRvU2V0IHN0cmluZ1ZhbHVlPSJyZXF1ZXN0Ii8+DQoJPC9MN3A6U2V0VmFyaWFibGU+"/>
+                                    <L7p:VariableToSet stringValue="policyXml"/>
+                                    </L7p:SetVariable>
+                                    <L7p:assertionComment>
+                                    <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// GET or DELETE Method"/>
+                                    </L7p:entry>
+                                    </L7p:Properties>
+                                    </L7p:assertionComment>
+                                    </wsp:All>
+                                    <wsp:All wsp:Usage="Required">
+                                    <wsp:OneOrMore wsp:Usage="Required">
+                                    <L7p:ComparisonAssertion>
+                                    <L7p:Expression1 stringValue="${opMethod.result}"/>
+                                    <L7p:Expression2 stringValue="POST"/>
+                                    <L7p:Predicates predicates="included">
+                                    <L7p:item binary="included">
+
+                                    <L7p:RightValue stringValue="POST"/>
+                                    </L7p:item>
+                                    </L7p:Predicates>
+                                    </L7p:ComparisonAssertion>
+                                    <L7p:ComparisonAssertion>
+                                    <L7p:Expression1 stringValue="${opMethod.result}"/>
+                                    <L7p:Expression2 stringValue="PUT"/>
+                                    <L7p:Predicates predicates="included">
+                                    <L7p:item binary="included">
+
+                                    <L7p:RightValue stringValue="PUT"/>
+                                    </L7p:item>
+                                    </L7p:Predicates>
+                                    </L7p:ComparisonAssertion>
+                                    </wsp:OneOrMore>
+                                    <L7p:ComparisonAssertion>
+                                    <L7p:Expression1 stringValue="${removeNamespace.result}"/>
+                                    <L7p:Expression2 stringValue="No"/>
+                                    <L7p:Predicates predicates="included">
+                                    <L7p:item binary="included">
+                                    <L7p:RightValue stringValue="No"/>
+                                    </L7p:item>
+                                    </L7p:Predicates>
+                                    </L7p:ComparisonAssertion>
+                                    <L7p:SetVariable>
+                                    <L7p:AssertionComment assertionComment="included">
+                                    <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Create SOAP Message injecting request message as-is"/>
+                                    </L7p:entry>
+                                    </L7p:Properties>
+                                    </L7p:AssertionComment>
+                                    <L7p:Base64Expression stringValue="UEhOdllYQTZSVzUyWld4dmNHVWdlRzFzYm5NNmMyOWhjRDBpYUhSMGNEb3ZMM05qYUdWdFlYTXVlRzFzYzI5aGNDNXZjbWN2YzI5aGNDOWxiblpsYkc5d1pTOGlQanh6YjJGd09rSnZaSGsrSkh0eVpYRjFaWE4wTG0xaGFXNVFZWEowZlR3dmMyOWhjRHBDYjJSNVBqd3ZjMjloY0RwRmJuWmxiRzl3WlQ0PQ=="/>
+                                    <L7p:VariableToSet stringValue="soapMsgEncoded"/>
+                                    </L7p:SetVariable>
+                                    <L7p:SetVariable>
+                                    <L7p:Base64Expression stringValue="JHtwb2xpY3lYbWx9DQoJPEw3cDpTZXRWYXJpYWJsZT4NCgkJPEw3cDpCYXNlNjRFeHByZXNzaW9uIHN0cmluZ1ZhbHVlPSIke3NvYXBNc2dFbmNvZGVkfSIvPg0KCQk8TDdwOkNvbnRlbnRUeXBlIHN0cmluZ1ZhbHVlPSJ0ZXh0L3htbDsgY2hhcnNldD11dGYtOCIvPg0KCQk8TDdwOkRhdGFUeXBlIHZhcmlhYmxlRGF0YVR5cGU9Im1lc3NhZ2UiLz4NCgkJPEw3cDpWYXJpYWJsZVRvU2V0IHN0cmluZ1ZhbHVlPSJyZXF1ZXN0Ii8+DQoJPC9MN3A6U2V0VmFyaWFibGU+"/>
+                                    <L7p:VariableToSet stringValue="policyXml"/>
+                                    </L7p:SetVariable>
+                                    <L7p:assertionComment>
+                                    <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// POST and PUT methods, Namespaces not removed"/>
+                                    </L7p:entry>
+                                    </L7p:Properties>
+                                    </L7p:assertionComment>
+                                    </wsp:All>
+                                    <wsp:All wsp:Usage="Required">
+                                    <wsp:OneOrMore wsp:Usage="Required">
+                                    <L7p:ComparisonAssertion>
+                                    <L7p:Expression1 stringValue="${opMethod.result}"/>
+                                    <L7p:Expression2 stringValue="POST"/>
+                                    <L7p:Predicates predicates="included">
+                                    <L7p:item binary="included">
+
+                                    <L7p:RightValue stringValue="POST"/>
+                                    </L7p:item>
+                                    </L7p:Predicates>
+                                    </L7p:ComparisonAssertion>
+                                    <L7p:ComparisonAssertion>
+                                    <L7p:Expression1 stringValue="${opMethod.result}"/>
+                                    <L7p:Expression2 stringValue="PUT"/>
+                                    <L7p:Predicates predicates="included">
+                                    <L7p:item binary="included">
+
+                                    <L7p:RightValue stringValue="PUT"/>
+                                    </L7p:item>
+                                    </L7p:Predicates>
+                                    </L7p:ComparisonAssertion>
+                                    </wsp:OneOrMore>
+                                    <L7p:ComparisonAssertion>
+                                    <L7p:Expression1 stringValue="${removeNamespace.result}"/>
+                                    <L7p:Expression2 stringValue="Yes"/>
+                                    <L7p:Predicates predicates="included">
+                                    <L7p:item binary="included">
+                                    <L7p:RightValue stringValue="Yes"/>
+                                    </L7p:item>
+                                    </L7p:Predicates>
+                                    </L7p:ComparisonAssertion>
+                                    <L7p:SetVariable>
+                                    <L7p:Base64Expression stringValue="JHtmb3JlYWNoLmN1cnJlbnR9"/>
+                                    <L7p:ContentType stringValue="text/xml; charset=utf-8"/>
+                                    <L7p:DataType variableDataType="message"/>
+                                    <L7p:VariableToSet stringValue="soapMsgXsl"/>
+                                    </L7p:SetVariable>
+                                    <L7p:XslTransformation>
+                                    <L7p:Direction intValue="-1"/>
+
+                                    <L7p:OtherTargetMessageVariable stringValue="soapMsgXsl"/>
+                                    <L7p:ResourceInfo staticResourceInfo="included">
+                                    <L7p:Document stringValue="&lt;!-- Template to create tranform for POST|PUT|DELETE requestsCreated by: Eurus Kim, Layer 7 TechnologiesDate: March 3, 2012-->&lt;xsl10:stylesheet exclude-result-prefixes=&quot;xsl10&quot; version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform/Generated&quot; xmlns:xsl10=&quot;http://www.w3.org/1999/XSL/Transform&quot;>&lt;xsl10:namespace-alias result-prefix=&quot;xsl10&quot; stylesheet-prefix=&quot;xsl&quot;/>&#x9;&lt;xsl10:template match=&quot;/&quot;>&#x9;&#x9;&lt;xsl:stylesheet version=&quot;1.0&quot;>&#x9;&#x9;&#x9;&lt;xsl:output method=&quot;xml&quot;/>&#x9;&#x9;&#x9;&lt;xsl:template match=&quot;/&quot;>&#x9;&#x9;&#x9;&#x9;&lt;xsl10:apply-templates/>&#x9;&#x9;&#x9;&lt;/xsl:template>&#x9;&#x9;&lt;/xsl:stylesheet>&#x9;&lt;/xsl10:template>&#x9;&lt;xsl10:template match=&quot;operation | request&quot;>&#x9;&#x9;&lt;xsl10:apply-templates/>&#x9;&lt;/xsl10:template>&#x9;&lt;xsl10:template match=&quot;*&quot;>&#x9;&#x9;&lt;xsl10:choose>&#x9;&#x9;&#x9;&lt;xsl10:when test=&quot;./*&quot;>&#x9;&#x9;&#x9;&#x9;&lt;xsl10:copy>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl10:apply-templates/>&#x9;&#x9;&#x9;&#x9;&lt;/xsl10:copy>&#x9;&#x9;&#x9;&lt;/xsl10:when>&#x9;&#x9;&#x9;&lt;xsl10:otherwise>&#x9;&#x9;&#x9;&#x9;&lt;xsl10:copy>&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xsl:value-of select=&quot;{concat('//',local-name())}&quot;/>&#x9;&#x9;&#x9;&#x9;&lt;/xsl10:copy>&#x9;&#x9;&#x9;&lt;/xsl10:otherwise>&#x9;&#x9;&lt;/xsl10:choose>&#x9;&lt;/xsl10:template>&#x9;&lt;xsl10:template match=&quot;@*&quot;>&#x9;&#x9;&lt;xsl10:copy>&#x9;&#x9;&#x9;&lt;xsl10:apply-templates/>&#x9;&#x9;&lt;/xsl10:copy>&#x9;&lt;/xsl10:template>&lt;/xsl10:stylesheet>"/>
+                                    </L7p:ResourceInfo>
+                                    <L7p:Target target="OTHER"/>
+                                    <L7p:TransformName stringValue=""/>
+                                    </L7p:XslTransformation>
+                                    <wsp:OneOrMore wsp:Usage="Required">
+                                    <wsp:All wsp:Usage="Required">
+                                    <L7p:ComparisonAssertion>
+                                    <L7p:Expression1 stringValue="${serviceJson.result}"/>
+                                    <L7p:Expression2 stringValue="Yes"/>
+                                    <L7p:Predicates predicates="included">
+                                    <L7p:item binary="included">
+
+                                    <L7p:RightValue stringValue="Yes"/>
+                                    </L7p:item>
+                                    </L7p:Predicates>
+                                    </L7p:ComparisonAssertion>
+                                    <L7p:SetVariable>
+
+                                    <L7p:AssertionComment assertionComment="included">
+
+                                    <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+
+                                    <L7p:value stringValue="// Create tranform for JSON request type"/>
+                                    </L7p:entry>
+                                    </L7p:Properties>
+                                    </L7p:AssertionComment>
+
+                                    <L7p:Base64Expression stringValue="JHtwb2xpY3lYbWx9DQogICAgICAgIDx3c3A6T25lT3JNb3JlIHdzcDpVc2FnZT0iUmVxdWlyZWQiPg0KICAgICAgICAgICAgPHdzcDpBbGwgd3NwOlVzYWdlPSJSZXF1aXJlZCI+DQogICAgICAgICAgICAgICAgPEw3cDpDb21wYXJpc29uQXNzZXJ0aW9uPg0KICAgICAgICAgICAgICAgICAgICA8TDdwOkV4cHJlc3Npb24xIHN0cmluZ1ZhbHVlPSImIzM2O3tyZXF1ZXN0LmNvbnRlbnRUeXBlfSIvPg0KICAgICAgICAgICAgICAgICAgICA8TDdwOkV4cHJlc3Npb24yIHN0cmluZ1ZhbHVlPSJqc29uIi8+DQogICAgICAgICAgICAgICAgICAgIDxMN3A6T3BlcmF0b3Igb3BlcmF0b3I9IkNPTlRBSU5TIi8+DQogICAgICAgICAgICAgICAgICAgIDxMN3A6UHJlZGljYXRlcyBwcmVkaWNhdGVzPSJpbmNsdWRlZCI+DQogICAgICAgICAgICAgICAgICAgICAgICA8TDdwOml0ZW0gYmluYXJ5PSJpbmNsdWRlZCI+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPEw3cDpPcGVyYXRvciBvcGVyYXRvcj0iQ09OVEFJTlMiLz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TDdwOlJpZ2h0VmFsdWUgc3RyaW5nVmFsdWU9Impzb24iLz4NCiAgICAgICAgICAgICAgICAgICAgICAgIDwvTDdwOml0ZW0+DQogICAgICAgICAgICAgICAgICAgIDwvTDdwOlByZWRpY2F0ZXM+DQogICAgICAgICAgICAgICAgPC9MN3A6Q29tcGFyaXNvbkFzc2VydGlvbj4NCiAgICAgICAgICAgICAgICA8TDdwOkpzb25UcmFuc2Zvcm1hdGlvbj4NCiAgICAgICAgICAgICAgICAgICAgPEw3cDpEZXN0aW5hdGlvbk1lc3NhZ2VUYXJnZXQgTWVzc2FnZVRhcmdldD0iaW5jbHVkZWQiPg0KICAgICAgICAgICAgICAgICAgICAgICAgPEw3cDpUYXJnZXRNb2RpZmllZEJ5R2F0ZXdheSBib29sZWFuVmFsdWU9InRydWUiLz4NCiAgICAgICAgICAgICAgICAgICAgPC9MN3A6RGVzdGluYXRpb25NZXNzYWdlVGFyZ2V0Pg0KICAgICAgICAgICAgICAgICAgICA8TDdwOlJvb3RUYWdTdHJpbmcgc3RyaW5nVmFsdWU9InJlcXVlc3QiLz4NCiAgICAgICAgICAgICAgICAgICAgPEw3cDpUYXJnZXQgdGFyZ2V0PSJSRVFVRVNUIi8+DQogICAgICAgICAgICAgICAgICAgIDxMN3A6VHJhbnNmb3JtYXRpb24gdHJhbnNmb3JtYXRpb249IkpTT05fdG9fWE1MIi8+DQogICAgICAgICAgICAgICAgPC9MN3A6SnNvblRyYW5zZm9ybWF0aW9uPg0KICAgICAgICAgICAgICAgIDxMN3A6YXNzZXJ0aW9uQ29tbWVudD4NCiAgICAgICAgICAgICAgICAgICAgPEw3cDpQcm9wZXJ0aWVzIG1hcFZhbHVlPSJpbmNsdWRlZCI+DQogICAgICAgICAgICAgICAgICAgICAgICA8TDdwOmVudHJ5Pg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMN3A6a2V5IHN0cmluZ1ZhbHVlPSJSSUdIVC5DT01NRU5UIi8+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPEw3cDp2YWx1ZSBzdHJpbmdWYWx1ZT0iLy8gSWYgSlNPTiwgdHJhbnNmb3JtIG1lc3NhZ2UgdG8gWE1MIi8+DQogICAgICAgICAgICAgICAgICAgICAgICA8L0w3cDplbnRyeT4NCiAgICAgICAgICAgICAgICAgICAgPC9MN3A6UHJvcGVydGllcz4NCiAgICAgICAgICAgICAgICA8L0w3cDphc3NlcnRpb25Db21tZW50Pg0KICAgICAgICAgICAgPC93c3A6QWxsPg0KICAgICAgICAgICAgPEw3cDpTZXRWYXJpYWJsZT4NCiAgICAgICAgICAgICAgICA8TDdwOkFzc2VydGlvbkNvbW1lbnQgYXNzZXJ0aW9uQ29tbWVudD0iaW5jbHVkZWQiPg0KICAgICAgICAgICAgICAgICAgICA8TDdwOlByb3BlcnRpZXMgbWFwVmFsdWU9ImluY2x1ZGVkIj4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxMN3A6ZW50cnk+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPEw3cDprZXkgc3RyaW5nVmFsdWU9IlJJR0hULkNPTU1FTlQiLz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TDdwOnZhbHVlIHN0cmluZ1ZhbHVlPSIvLyBJZiBYTUwsIGNoYW5nZSBDb250ZW50LVR5cGUiLz4NCiAgICAgICAgICAgICAgICAgICAgICAgIDwvTDdwOmVudHJ5Pg0KICAgICAgICAgICAgICAgICAgICA8L0w3cDpQcm9wZXJ0aWVzPg0KICAgICAgICAgICAgICAgIDwvTDdwOkFzc2VydGlvbkNvbW1lbnQ+DQogICAgICAgICAgICAgICAgPEw3cDpCYXNlNjRFeHByZXNzaW9uIHN0cmluZ1ZhbHVlPSJKSHR5WlhGMVpYTjBMbTFoYVc1UVlYSjBmUT09Ii8+DQogICAgICAgICAgICAgICAgPEw3cDpDb250ZW50VHlwZSBzdHJpbmdWYWx1ZT0idGV4dC94bWw7IGNoYXJzZXQ9dXRmLTgiLz4NCiAgICAgICAgICAgICAgICA8TDdwOkRhdGFUeXBlIHZhcmlhYmxlRGF0YVR5cGU9Im1lc3NhZ2UiLz4NCiAgICAgICAgICAgICAgICA8TDdwOlZhcmlhYmxlVG9TZXQgc3RyaW5nVmFsdWU9InJlcXVlc3QiLz4NCiAgICAgICAgICAgIDwvTDdwOlNldFZhcmlhYmxlPg0KICAgICAgICAgICAgPEw3cDphc3NlcnRpb25Db21tZW50Pg0KICAgICAgICAgICAgICAgIDxMN3A6UHJvcGVydGllcyBtYXBWYWx1ZT0iaW5jbHVkZWQiPg0KICAgICAgICAgICAgICAgICAgICA8TDdwOmVudHJ5Pg0KICAgICAgICAgICAgICAgICAgICAgICAgPEw3cDprZXkgc3RyaW5nVmFsdWU9IlJJR0hULkNPTU1FTlQiLz4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxMN3A6dmFsdWUgc3RyaW5nVmFsdWU9Ii8vIENoZWNrIGlmIHJlcXVlc3QgaXMgSlNPTiBvciBYTUwiLz4NCiAgICAgICAgICAgICAgICAgICAgPC9MN3A6ZW50cnk+DQogICAgICAgICAgICAgICAgPC9MN3A6UHJvcGVydGllcz4NCiAgICAgICAgICAgIDwvTDdwOmFzc2VydGlvbkNvbW1lbnQ+DQogICAgICAgIDwvd3NwOk9uZU9yTW9yZT4="/>
+
+                                    <L7p:VariableToSet stringValue="policyXml"/>
+                                    </L7p:SetVariable>
+                                    <L7p:assertionComment>
+                                    <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+
+                                    <L7p:value stringValue="// If JSON is requested"/>
+                                    </L7p:entry>
+                                    </L7p:Properties>
+                                    </L7p:assertionComment>
+                                    </wsp:All>
+                                    <L7p:SetVariable>
+
+                                    <L7p:AssertionComment assertionComment="included">
+                                    <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+
+                                    <L7p:value stringValue="// Create variable to reset request Content-Type to text/xml"/>
+                                    </L7p:entry>
+                                    </L7p:Properties>
+                                    </L7p:AssertionComment>
+
+                                    <L7p:Base64Expression stringValue="JHtwb2xpY3lYbWx9DQoJPEw3cDpTZXRWYXJpYWJsZT4NCgkJPEw3cDpCYXNlNjRFeHByZXNzaW9uIHN0cmluZ1ZhbHVlPSJKSHR5WlhGMVpYTjBMbTFoYVc1UVlYSjBmUT09Ii8+DQoJCTxMN3A6Q29udGVudFR5cGUgc3RyaW5nVmFsdWU9InRleHQveG1sOyBjaGFyc2V0PXV0Zi04Ii8+DQoJCTxMN3A6RGF0YVR5cGUgdmFyaWFibGVEYXRhVHlwZT0ibWVzc2FnZSIvPg0KCQk8TDdwOlZhcmlhYmxlVG9TZXQgc3RyaW5nVmFsdWU9InJlcXVlc3QiLz4NCgk8L0w3cDpTZXRWYXJpYWJsZT4="/>
+                                    <L7p:VariableToSet stringValue="policyXml"/>
+                                    </L7p:SetVariable>
+                                    <L7p:assertionComment>
+                                    <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Check for JSON"/>
+                                    </L7p:entry>
+                                    </L7p:Properties>
+                                    </L7p:assertionComment>
+                                    </wsp:OneOrMore>
+                                    <L7p:SetVariable>
+                                    <L7p:AssertionComment assertionComment="included">
+                                    <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Create XSLT transform for request"/>
+                                    </L7p:entry>
+                                    </L7p:Properties>
+                                    </L7p:AssertionComment>
+                                    <L7p:Base64Expression stringValue="JHtwb2xpY3lYbWx9DQoJPEw3cDpYc2xUcmFuc2Zvcm1hdGlvbj4NCgkJPEw3cDpSZXNvdXJjZUluZm8gc3RhdGljUmVzb3VyY2VJbmZvPSJpbmNsdWRlZCI+DQoJCQk8TDdwOkRvY3VtZW50IHN0cmluZ1ZhbHVlUmVmZXJlbmNlPSJpbmxpbmUiPjwhW0NEQVRBWw0KJHtzb2FwTXNnWHNsLm1haW5QYXJ0fQ0KCQkJXV0+PC9MN3A6RG9jdW1lbnQ+DQoJCTwvTDdwOlJlc291cmNlSW5mbz4NCgkJPEw3cDpUcmFuc2Zvcm1OYW1lIHN0cmluZ1ZhbHVlPSIiLz4NCgk8L0w3cDpYc2xUcmFuc2Zvcm1hdGlvbj4="/>
+                                    <L7p:VariableToSet stringValue="policyXml"/>
+                                    </L7p:SetVariable>
+                                    <L7p:assertionComment>
+                                    <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// POST and PUT methods, Namespaces removed. Also check for JSON"/>
+                                    </L7p:entry>
+                                    </L7p:Properties>
+                                    </L7p:assertionComment>
+                                    </wsp:All>
+                                    </wsp:OneOrMore>
+                                    <L7p:assertionComment>
+                                    <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// If parameters exist, set method to translate REST to SOAP"/>
+                                    </L7p:entry>
+                                    </L7p:Properties>
+                                    </L7p:assertionComment>
+                                </wsp:All>
+                                <wsp:All wsp:Usage="Required">
+                                    <L7p:ComparisonAssertion>
+                                    <L7p:Expression1 stringValue="${opParams.result}"/>
+                                    <L7p:Expression2 stringValue="No"/>
+                                    <L7p:Predicates predicates="included">
+                                    <L7p:item binary="included">
+                                    <L7p:RightValue stringValue="No"/>
+                                    </L7p:item>
+                                    </L7p:Predicates>
+                                    </L7p:ComparisonAssertion>
+                                    <L7p:ResponseXpathAssertion>
+                                    <L7p:VariablePrefix stringValue="opRequest"/>
+                                    <L7p:XmlMsgSrc stringValue="operation"/>
+                                    <L7p:XpathExpression xpathExpressionValue="included">
+                                    <L7p:Expression stringValue="/operation/request/*"/>
+                                    <L7p:Namespaces mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="ns"/>
+                                    <L7p:value stringValue="http://warehouse.acme.com/ws"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="s"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/soap/envelope/"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="soap"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                                    </L7p:entry>
+                                    </L7p:Namespaces>
+                                    </L7p:XpathExpression>
+                                    </L7p:ResponseXpathAssertion>
+                                    <L7p:EncodeDecode>
+                                    <L7p:SourceVariableName stringValue="opRequest.element"/>
+                                    <L7p:TargetDataType variableDataType="string"/>
+                                    <L7p:TargetVariableName stringValue="soapMsgEncoded"/>
+                                    <L7p:TransformType transformType="BASE64_ENCODE"/>
+                                    </L7p:EncodeDecode>
+                                    <L7p:SetVariable>
+                                    <L7p:Base64Expression stringValue="JHtwb2xpY3lYbWx9DQoJPEw3cDpTZXRWYXJpYWJsZT4NCgkJPEw3cDpCYXNlNjRFeHByZXNzaW9uIHN0cmluZ1ZhbHVlPSIke3NvYXBNc2dFbmNvZGVkfSIvPg0KCQk8TDdwOkNvbnRlbnRUeXBlIHN0cmluZ1ZhbHVlPSJ0ZXh0L3htbDsgY2hhcnNldD11dGYtOCIvPg0KCQk8TDdwOkRhdGFUeXBlIHZhcmlhYmxlRGF0YVR5cGU9Im1lc3NhZ2UiLz4NCgkJPEw3cDpWYXJpYWJsZVRvU2V0IHN0cmluZ1ZhbHVlPSJyZXF1ZXN0Ii8+DQoJPC9MN3A6U2V0VmFyaWFibGU+"/>
+                                    <L7p:VariableToSet stringValue="policyXml"/>
+                                    </L7p:SetVariable>
+                                    <L7p:assertionComment>
+                                    <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// If no parameters exist, then simply create SOAP message as is to send to Web Service"/>
+                                    </L7p:entry>
+                                    </L7p:Properties>
+                                    </L7p:assertionComment>
+                                </wsp:All>
+                                <wsp:All wsp:Usage="Required">
+                                    <L7p:HardcodedResponse>
+                                    <L7p:Base64ResponseBody stringValue="RXJyb3IgQ3JlYXRpbmcgU09BUCBNZXNzYWdlIGZvciBhbiBPcGVyYXRpb24="/>
+                                    <L7p:ResponseContentType stringValue="text/html; charset=UTF-8"/>
+                                    <L7p:ResponseStatus stringValue="500"/>
+                                    </L7p:HardcodedResponse>
+                                    <L7p:FalseAssertion/>
+                                    <L7p:assertionComment>
+                                    <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Error creating message"/>
+                                    </L7p:entry>
+                                    </L7p:Properties>
+                                    </L7p:assertionComment>
+                                </wsp:All>
+                                <L7p:assertionComment>
+                                    <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Check if there are parameters in the request"/>
+                                    </L7p:entry>
+                                    </L7p:Properties>
+                                </L7p:assertionComment>
+                            </wsp:OneOrMore>
+                            <L7p:SetVariable>
+                                <L7p:Base64Expression stringValue="JHtwb2xpY3lYbWx9DQoJPEw3cDphc3NlcnRpb25Db21tZW50Pg0KCQk8TDdwOlByb3BlcnRpZXMgbWFwVmFsdWU9ImluY2x1ZGVkIj4NCgkJCTxMN3A6ZW50cnk+DQoJCQkJPEw3cDprZXkgc3RyaW5nVmFsdWU9IlJJR0hULkNPTU1FTlQiLz4NCgkJCQk8TDdwOnZhbHVlIHN0cmluZ1ZhbHVlPSIvLyAke29wTmFtZS5yZXN1bHR9IG9wZXJhdGlvbiIvPg0KCQkJPC9MN3A6ZW50cnk+DQoJCTwvTDdwOlByb3BlcnRpZXM+DQoJPC9MN3A6YXNzZXJ0aW9uQ29tbWVudD4NCjwvd3NwOkFsbD4="/>
+                                <L7p:VariableToSet stringValue="policyXml"/>
+                            </L7p:SetVariable>
+                            <L7p:assertionComment>
+                                <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Create Policy XML for each operation found"/>
+                                    </L7p:entry>
+                                </L7p:Properties>
+                            </L7p:assertionComment>
+                        </L7p:ForEachLoop>
+                        <L7p:SetVariable>
+                            <L7p:AssertionComment assertionComment="included">
+                                <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Policy XML - Close off the 'At least one' for operation matching"/>
+                                    </L7p:entry>
+                                </L7p:Properties>
+                            </L7p:AssertionComment>
+                            <L7p:Base64Expression stringValue="JHtwb2xpY3lYbWx9DQoJPEw3cDphc3NlcnRpb25Db21tZW50Pg0KCQk8TDdwOlByb3BlcnRpZXMgbWFwVmFsdWU9ImluY2x1ZGVkIj4NCgkJCTxMN3A6ZW50cnk+DQoJCQkJPEw3cDprZXkgc3RyaW5nVmFsdWU9IlJJR0hULkNPTU1FTlQiLz4NCgkJCQk8TDdwOnZhbHVlIHN0cmluZ1ZhbHVlPSIvLyBpZGVudGlmeSBvcGVyYXRpb24iLz4NCgkJCTwvTDdwOmVudHJ5Pg0KCQk8L0w3cDpQcm9wZXJ0aWVzPg0KCTwvTDdwOmFzc2VydGlvbkNvbW1lbnQ+DQo8L3dzcDpPbmVPck1vcmU+"/>
+                            <L7p:VariableToSet stringValue="policyXml"/>
+                        </L7p:SetVariable>
+                        <L7p:SetVariable>
+                            <L7p:AssertionComment assertionComment="included">
+                                <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Policy XML - Set HTTP Routing Assertion"/>
+                                    </L7p:entry>
+                                </L7p:Properties>
+                            </L7p:AssertionComment>
+                            <L7p:Base64Expression stringValue="JHtwb2xpY3lYbWx9DQo8TDdwOkh0dHBSb3V0aW5nQXNzZXJ0aW9uPg0KCTxMN3A6RmFpbE9uRXJyb3JTdGF0dXMgYm9vbGVhblZhbHVlPSJmYWxzZSIvPg0KICAgICAgICA8TDdwOkh0dHBNZXRob2QgaHR0cE1ldGhvZD0iUE9TVCIvPg0KCTxMN3A6UHJvdGVjdGVkU2VydmljZVVybCBzdHJpbmdWYWx1ZT0iJHtzZXJ2aWNlU29hcEVuZHBvaW50LnJlc3VsdH0iLz4NCgk8TDdwOlByb3h5UGFzc3dvcmQgc3RyaW5nVmFsdWVOdWxsPSJudWxsIi8+DQoJPEw3cDpQcm94eVVzZXJuYW1lIHN0cmluZ1ZhbHVlTnVsbD0ibnVsbCIvPg0KCTxMN3A6UmVxdWVzdEhlYWRlclJ1bGVzIGh0dHBQYXNzdGhyb3VnaFJ1bGVTZXQ9ImluY2x1ZGVkIj4NCgkJPEw3cDpSdWxlcyBodHRwUGFzc3Rocm91Z2hSdWxlcz0iaW5jbHVkZWQiPg0KCQkJPEw3cDppdGVtIGh0dHBQYXNzdGhyb3VnaFJ1bGU9ImluY2x1ZGVkIj4NCgkJCQk8TDdwOk5hbWUgc3RyaW5nVmFsdWU9IkNvb2tpZSIvPg0KCQkJPC9MN3A6aXRlbT4NCgkJCTxMN3A6aXRlbSBodHRwUGFzc3Rocm91Z2hSdWxlPSJpbmNsdWRlZCI+DQoJCQkJPEw3cDpDdXN0b21pemVWYWx1ZSBzdHJpbmdWYWx1ZT0iJnF1b3Q7JiMzNjt7c29hcEFjdGlvbn0mcXVvdDsiLz4NCgkJCQk8TDdwOk5hbWUgc3RyaW5nVmFsdWU9IlNPQVBBY3Rpb24iLz4NCgkJCQk8TDdwOlVzZXNDdXN0b21pemVkVmFsdWUgYm9vbGVhblZhbHVlPSJ0cnVlIi8+DQoJCQk8L0w3cDppdGVtPg0KCQk8L0w3cDpSdWxlcz4NCgk8L0w3cDpSZXF1ZXN0SGVhZGVyUnVsZXM+DQoJPEw3cDpSZXF1ZXN0UGFyYW1SdWxlcyBodHRwUGFzc3Rocm91Z2hSdWxlU2V0PSJpbmNsdWRlZCI+DQoJCTxMN3A6Rm9yd2FyZEFsbCBib29sZWFuVmFsdWU9InRydWUiLz4NCgkJPEw3cDpSdWxlcyBodHRwUGFzc3Rocm91Z2hSdWxlcz0iaW5jbHVkZWQiLz4NCgk8L0w3cDpSZXF1ZXN0UGFyYW1SdWxlcz4NCgk8TDdwOlJlc3BvbnNlSGVhZGVyUnVsZXMgaHR0cFBhc3N0aHJvdWdoUnVsZVNldD0iaW5jbHVkZWQiPg0KCQk8TDdwOlJ1bGVzIGh0dHBQYXNzdGhyb3VnaFJ1bGVzPSJpbmNsdWRlZCI+DQoJCQk8TDdwOml0ZW0gaHR0cFBhc3N0aHJvdWdoUnVsZT0iaW5jbHVkZWQiPg0KCQkJCTxMN3A6TmFtZSBzdHJpbmdWYWx1ZT0iU2V0LUNvb2tpZSIvPg0KCQkJPC9MN3A6aXRlbT4NCgkJPC9MN3A6UnVsZXM+DQoJPC9MN3A6UmVzcG9uc2VIZWFkZXJSdWxlcz4NCgk8TDdwOlNhbWxBc3NlcnRpb25WZXJzaW9uIGludFZhbHVlPSIyIi8+DQo8L0w3cDpIdHRwUm91dGluZ0Fzc2VydGlvbj4="/>
+                            <L7p:VariableToSet stringValue="policyXml"/>
+                        </L7p:SetVariable>
+                        <wsp:OneOrMore wsp:Usage="Required">
+                            <wsp:All wsp:Usage="Required">
+                                <L7p:ComparisonAssertion>
+                                    <L7p:Expression1 stringValue="${removeNamespace.result}"/>
+                                    <L7p:Expression2 stringValue="Yes"/>
+                                    <L7p:Predicates predicates="included">
+                                    <L7p:item binary="included">
+                                    <L7p:RightValue stringValue="Yes"/>
+                                    </L7p:item>
+                                    </L7p:Predicates>
+                                </L7p:ComparisonAssertion>
+                                <L7p:SetVariable>
+                                    <L7p:Base64Expression stringValue="PHhzbDpzdHlsZXNoZWV0IHZlcnNpb249IjEuMCIgeG1sbnM6eHNsPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L1hTTC9UcmFuc2Zvcm0iPg0KCTx4c2w6b3V0cHV0IG1ldGhvZD0ieG1sIiBpbmRlbnQ9InllcyIvPg0KCTx4c2w6c3RyaXAtc3BhY2UgZWxlbWVudHM9IioiLz4NCgk8eHNsOnRlbXBsYXRlIG1hdGNoPSIqW25hbWVzcGFjZS11cmkoKT0naHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvc29hcC9lbnZlbG9wZS8nXSI+DQoJCTx4c2w6YXBwbHktdGVtcGxhdGVzIHNlbGVjdD0iQCp8bm9kZSgpIi8+DQoJPC94c2w6dGVtcGxhdGU+DQoJPHhzbDp0ZW1wbGF0ZSBtYXRjaD0iKiI+DQoJCTx4c2w6ZWxlbWVudCBuYW1lPSJ7bG9jYWwtbmFtZSgpfSI+DQoJCQk8eHNsOmFwcGx5LXRlbXBsYXRlcyBzZWxlY3Q9IkAqfG5vZGUoKSIvPg0KCQk8L3hzbDplbGVtZW50Pg0KCTwveHNsOnRlbXBsYXRlPg0KCTx4c2w6dGVtcGxhdGUgbWF0Y2g9IkAqfG5vZGUoKSIgcHJpb3JpdHk9Ii0yIj4NCgkJPHhzbDpjb3B5Pg0KCQkJPHhzbDphcHBseS10ZW1wbGF0ZXMgc2VsZWN0PSJAKnxub2RlKCkiLz4NCgkJPC94c2w6Y29weT4NCgk8L3hzbDp0ZW1wbGF0ZT4NCjwveHNsOnN0eWxlc2hlZXQ+"/>
+                                    <L7p:VariableToSet stringValue="responseXslt"/>
+                                </L7p:SetVariable>
+                                <L7p:assertionComment>
+                                    <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// If removeNamespace is Yes"/>
+                                    </L7p:entry>
+                                    </L7p:Properties>
+                                </L7p:assertionComment>
+                            </wsp:All>
+                            <L7p:SetVariable>
+                                <L7p:Base64Expression stringValue="PHhzbDpzdHlsZXNoZWV0IHZlcnNpb249IjEuMCIgeG1sbnM6eHNsPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L1hTTC9UcmFuc2Zvcm0iPg0KCTx4c2w6b3V0cHV0IG1ldGhvZD0ieG1sIiBpbmRlbnQ9InllcyIvPg0KCTx4c2w6c3RyaXAtc3BhY2UgZWxlbWVudHM9IioiLz4NCgk8eHNsOnRlbXBsYXRlIG1hdGNoPSIqW25hbWVzcGFjZS11cmkoKT0naHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvc29hcC9lbnZlbG9wZS8nXSI+DQoJCTx4c2w6YXBwbHktdGVtcGxhdGVzIHNlbGVjdD0iQCp8bm9kZSgpIi8+DQoJPC94c2w6dGVtcGxhdGU+DQoJPHhzbDp0ZW1wbGF0ZSBtYXRjaD0iKiI+DQoJCTx4c2w6ZWxlbWVudCBuYW1lPSJ7bmFtZSgpfSIgbmFtZXNwYWNlPSJ7bmFtZXNwYWNlLXVyaSgpfSI+DQoJCQk8eHNsOmFwcGx5LXRlbXBsYXRlcyBzZWxlY3Q9IkAqfG5vZGUoKSIvPg0KCQk8L3hzbDplbGVtZW50Pg0KCTwveHNsOnRlbXBsYXRlPg0KCTx4c2w6dGVtcGxhdGUgbWF0Y2g9IkAqfG5vZGUoKSIgcHJpb3JpdHk9Ii0yIj4NCgkJPHhzbDpjb3B5Pg0KCQkJPHhzbDphcHBseS10ZW1wbGF0ZXMgc2VsZWN0PSJAKnxub2RlKCkiLz4NCgkJPC94c2w6Y29weT4NCgk8L3hzbDp0ZW1wbGF0ZT4NCjwveHNsOnN0eWxlc2hlZXQ+"/>
+                                <L7p:VariableToSet stringValue="responseXslt"/>
+                            </L7p:SetVariable>
+                            <L7p:assertionComment>
+                                <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Check how to transform the response"/>
+                                    </L7p:entry>
+                                </L7p:Properties>
+                            </L7p:assertionComment>
+                        </wsp:OneOrMore>
+                        <L7p:SetVariable>
+                            <L7p:AssertionComment assertionComment="included">
+                                <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Policy XML - Set Response Transformation"/>
+                                    </L7p:entry>
+                                </L7p:Properties>
+                            </L7p:AssertionComment>
+                            <L7p:Base64Expression stringValue="JHtwb2xpY3lYbWx9DQo8TDdwOlhzbFRyYW5zZm9ybWF0aW9uPg0KPEw3cDpBc3NlcnRpb25Db21tZW50IGFzc2VydGlvbkNvbW1lbnQ9ImluY2x1ZGVkIj4NCjxMN3A6UHJvcGVydGllcyBtYXBWYWx1ZT0iaW5jbHVkZWQiPg0KPEw3cDplbnRyeT4NCjxMN3A6a2V5IHN0cmluZ1ZhbHVlPSJSSUdIVC5DT01NRU5UIi8+DQo8TDdwOnZhbHVlIHN0cmluZ1ZhbHVlPSIvLyBBcHBseSB0cmFuc2Zvcm1hdGlvbiBpbiByZXNwb25zZSB0byByZW1vdmUgU09BUCIvPg0KPC9MN3A6ZW50cnk+DQo8L0w3cDpQcm9wZXJ0aWVzPg0KPC9MN3A6QXNzZXJ0aW9uQ29tbWVudD4NCjxMN3A6RGlyZWN0aW9uIGludFZhbHVlPSIyIi8+DQo8TDdwOlJlc291cmNlSW5mbyBzdGF0aWNSZXNvdXJjZUluZm89ImluY2x1ZGVkIj4NCgk8TDdwOkRvY3VtZW50IHN0cmluZ1ZhbHVlUmVmZXJlbmNlPSJpbmxpbmUiPjwhW0NEQVRBWw0KJHtyZXNwb25zZVhzbHR9DQpdXT48L0w3cDpEb2N1bWVudD4NCjwvTDdwOlJlc291cmNlSW5mbz4NCjxMN3A6VGFyZ2V0IHRhcmdldD0iUkVTUE9OU0UiLz4NCjxMN3A6VHJhbnNmb3JtTmFtZSBzdHJpbmdWYWx1ZT0iIi8+DQo8L0w3cDpYc2xUcmFuc2Zvcm1hdGlvbj4="/>
+                            <L7p:VariableToSet stringValue="policyXml"/>
+                        </L7p:SetVariable>
+                        <wsp:OneOrMore wsp:Usage="Required">
+                            <wsp:All wsp:Usage="Required">
+                                <L7p:ComparisonAssertion>
+                                    <L7p:Expression1 stringValue="${serviceJson.result}"/>
+                                    <L7p:Expression2 stringValue="Yes"/>
+                                    <L7p:Predicates predicates="included">
+                                    <L7p:item binary="included">
+                                    <L7p:RightValue stringValue="Yes"/>
+                                    </L7p:item>
+                                    </L7p:Predicates>
+                                </L7p:ComparisonAssertion>
+                                <L7p:SetVariable>
+                                    <L7p:AssertionComment assertionComment="included">
+                                    <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Create tranform for JSON response"/>
+                                    </L7p:entry>
+                                    </L7p:Properties>
+                                    </L7p:AssertionComment>
+                                    <L7p:Base64Expression stringValue="JHtwb2xpY3lYbWx9DQogICAgICAgIDx3c3A6T25lT3JNb3JlIHdzcDpVc2FnZT0iUmVxdWlyZWQiPg0KICAgICAgICAgICAgPHdzcDpBbGwgd3NwOlVzYWdlPSJSZXF1aXJlZCI+DQogICAgICAgICAgICAgICAgPEw3cDpDb21wYXJpc29uQXNzZXJ0aW9uPg0KICAgICAgICAgICAgICAgICAgICA8TDdwOkV4cHJlc3Npb24xIHN0cmluZ1ZhbHVlPSImIzM2O3tyZXF1ZXN0Lmh0dHAuaGVhZGVyLmFjY2VwdH0iLz4NCiAgICAgICAgICAgICAgICAgICAgPEw3cDpFeHByZXNzaW9uMiBzdHJpbmdWYWx1ZT0ianNvbiIvPg0KICAgICAgICAgICAgICAgICAgICA8TDdwOk9wZXJhdG9yIG9wZXJhdG9yPSJDT05UQUlOUyIvPg0KICAgICAgICAgICAgICAgICAgICA8TDdwOlByZWRpY2F0ZXMgcHJlZGljYXRlcz0iaW5jbHVkZWQiPg0KICAgICAgICAgICAgICAgICAgICAgICAgPEw3cDppdGVtIGJpbmFyeT0iaW5jbHVkZWQiPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMN3A6T3BlcmF0b3Igb3BlcmF0b3I9IkNPTlRBSU5TIi8+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPEw3cDpSaWdodFZhbHVlIHN0cmluZ1ZhbHVlPSJqc29uIi8+DQogICAgICAgICAgICAgICAgICAgICAgICA8L0w3cDppdGVtPg0KICAgICAgICAgICAgICAgICAgICA8L0w3cDpQcmVkaWNhdGVzPg0KICAgICAgICAgICAgICAgIDwvTDdwOkNvbXBhcmlzb25Bc3NlcnRpb24+DQogICAgICAgICAgICAgICAgPEw3cDpKc29uVHJhbnNmb3JtYXRpb24+DQogICAgICAgICAgICAgICAgICAgIDxMN3A6UHJldHR5UHJpbnQgYm9vbGVhblZhbHVlPSJ0cnVlIi8+DQogICAgICAgICAgICAgICAgICAgIDxMN3A6Um9vdFRhZ1N0cmluZyBzdHJpbmdWYWx1ZT0iIi8+DQogICAgICAgICAgICAgICAgPC9MN3A6SnNvblRyYW5zZm9ybWF0aW9uPg0KICAgICAgICAgICAgICAgIDxMN3A6YXNzZXJ0aW9uQ29tbWVudD4NCiAgICAgICAgICAgICAgICAgICAgPEw3cDpQcm9wZXJ0aWVzIG1hcFZhbHVlPSJpbmNsdWRlZCI+DQogICAgICAgICAgICAgICAgICAgICAgICA8TDdwOmVudHJ5Pg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMN3A6a2V5IHN0cmluZ1ZhbHVlPSJSSUdIVC5DT01NRU5UIi8+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPEw3cDp2YWx1ZSBzdHJpbmdWYWx1ZT0iLy8gSWYgSlNPTiwgdHJhbnNmb3JtIG1lc3NhZ2UgdG8gSlNPTiIvPg0KICAgICAgICAgICAgICAgICAgICAgICAgPC9MN3A6ZW50cnk+DQogICAgICAgICAgICAgICAgICAgIDwvTDdwOlByb3BlcnRpZXM+DQogICAgICAgICAgICAgICAgPC9MN3A6YXNzZXJ0aW9uQ29tbWVudD4NCiAgICAgICAgICAgIDwvd3NwOkFsbD4NCiAgICAgICAgICAgIDxMN3A6VHJ1ZUFzc2VydGlvbi8+DQogICAgICAgICAgICA8TDdwOmFzc2VydGlvbkNvbW1lbnQ+DQogICAgICAgICAgICAgICAgPEw3cDpQcm9wZXJ0aWVzIG1hcFZhbHVlPSJpbmNsdWRlZCI+DQogICAgICAgICAgICAgICAgICAgIDxMN3A6ZW50cnk+DQogICAgICAgICAgICAgICAgICAgICAgICA8TDdwOmtleSBzdHJpbmdWYWx1ZT0iUklHSFQuQ09NTUVOVCIvPg0KICAgICAgICAgICAgICAgICAgICAgICAgPEw3cDp2YWx1ZSBzdHJpbmdWYWx1ZT0iLy8gQ2hlY2sgdGhlIHR5cGUgb2YgbWVzc2FnZSBleHBlY3RlZCBmcm9tIGNsaWVudCIvPg0KICAgICAgICAgICAgICAgICAgICA8L0w3cDplbnRyeT4NCiAgICAgICAgICAgICAgICA8L0w3cDpQcm9wZXJ0aWVzPg0KICAgICAgICAgICAgPC9MN3A6YXNzZXJ0aW9uQ29tbWVudD4NCiAgICAgICAgPC93c3A6T25lT3JNb3JlPg=="/>
+                                    <L7p:VariableToSet stringValue="policyXml"/>
+                                </L7p:SetVariable>
+                                <L7p:assertionComment>
+                                    <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// If JSON is requested"/>
+                                    </L7p:entry>
+                                    </L7p:Properties>
+                                </L7p:assertionComment>
+                            </wsp:All>
+                            <L7p:TrueAssertion/>
+                            <L7p:assertionComment>
+                                <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Check for JSON"/>
+                                    </L7p:entry>
+                                </L7p:Properties>
+                            </L7p:assertionComment>
+                        </wsp:OneOrMore>
+                        <L7p:SetVariable>
+                            <L7p:AssertionComment assertionComment="included">
+                                <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Policy XML Suffix"/>
+                                    </L7p:entry>
+                                </L7p:Properties>
+                            </L7p:AssertionComment>
+                            <L7p:Base64Expression stringValue="JHtwb2xpY3lYbWx9DQo8L3dzcDpBbGw+DQo8L3dzcDpQb2xpY3k+"/>
+                            <L7p:VariableToSet stringValue="policyXml"/>
+                        </L7p:SetVariable>
+                        <wsp:All wsp:Usage="Required">
+                            <L7p:Regex>
+                                <L7p:AutoTarget booleanValue="false"/>
+                                <L7p:OtherTargetMessageVariable stringValue="policyXml"/>
+                                <L7p:Regex stringValue="\&amp;quot;"/>
+                                <L7p:Replace booleanValue="true"/>
+                                <L7p:Replacement stringValue="\&amp;amp;quot;"/>
+                                <L7p:Target target="OTHER"/>
+                            </L7p:Regex>
+                            <L7p:Regex>
+                                <L7p:AutoTarget booleanValue="false"/>
+                                <L7p:OtherTargetMessageVariable stringValue="policyXml"/>
+                                <L7p:Regex stringValue="&lt;"/>
+                                <L7p:Replace booleanValue="true"/>
+                                <L7p:Replacement stringValue="&amp;lt;"/>
+                                <L7p:Target target="OTHER"/>
+                            </L7p:Regex>
+                            <L7p:Regex>
+                                <L7p:AutoTarget booleanValue="false"/>
+                                <L7p:OtherTargetMessageVariable stringValue="policyXml"/>
+                                <L7p:Regex stringValue=">"/>
+                                <L7p:Replace booleanValue="true"/>
+                                <L7p:Replacement stringValue="&amp;gt;"/>
+                                <L7p:Target target="OTHER"/>
+                            </L7p:Regex>
+                            <L7p:Regex>
+                                <L7p:AutoTarget booleanValue="false"/>
+                                <L7p:OtherTargetMessageVariable stringValue="policyXml"/>
+                                <L7p:Regex stringValue="&quot;"/>
+                                <L7p:Replace booleanValue="true"/>
+                                <L7p:Replacement stringValue="&amp;quot;"/>
+                                <L7p:Target target="OTHER"/>
+                            </L7p:Regex>
+                            <L7p:assertionComment>
+                                <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Convert Policy XML to string"/>
+                                    </L7p:entry>
+                                </L7p:Properties>
+                            </L7p:assertionComment>
+                        </wsp:All>
+                        <L7p:SetVariable>
+                            <L7p:AssertionComment assertionComment="included">
+                                <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Policy XML Suffix"/>
+                                    </L7p:entry>
+                                </L7p:Properties>
+                            </L7p:AssertionComment>
+                            <L7p:Base64Expression stringValue="PFNlcnZpY2UgeG1sbnM9Imh0dHA6Ly9ucy5sN3RlY2guY29tLzIwMTAvMDQvZ2F0ZXdheS1tYW5hZ2VtZW50Ij4NCiAgICA8U2VydmljZURldGFpbD4NCiAgICAgICAgPE5hbWU+JHtzZXJ2aWNlTmFtZS5yZXN1bHR9PC9OYW1lPg0KICAgICAgICA8RW5hYmxlZD50cnVlPC9FbmFibGVkPg0KICAgICAgICA8U2VydmljZU1hcHBpbmdzPg0KICAgICAgICAgICAgPEh0dHBNYXBwaW5nPg0KICAgICAgICAgICAgICAgIDxVcmxQYXR0ZXJuPiR7c2VydmljZUJhc2VVcmwucmVzdWx0fSo8L1VybFBhdHRlcm4+DQogICAgICAgICAgICAgICAgPFZlcmJzPg0KICAgICAgICAgICAgICAgICAgICA8VmVyYj5HRVQ8L1ZlcmI+DQogICAgICAgICAgICAgICAgICAgIDxWZXJiPlBPU1Q8L1ZlcmI+DQogICAgICAgICAgICAgICAgICAgIDxWZXJiPlBVVDwvVmVyYj4NCiAgICAgICAgICAgICAgICAgICAgPFZlcmI+REVMRVRFPC9WZXJiPg0KICAgICAgICAgICAgICAgIDwvVmVyYnM+DQogICAgICAgICAgICA8L0h0dHBNYXBwaW5nPg0KICAgICAgICA8L1NlcnZpY2VNYXBwaW5ncz4NCiAgICAgICAgPFByb3BlcnRpZXM+DQogICAgICAgICAgICA8UHJvcGVydHkga2V5PSJwb2xpY3lSZXZpc2lvbiI+DQogICAgICAgICAgICAgICAgPExvbmdWYWx1ZT4xPC9Mb25nVmFsdWU+DQogICAgICAgICAgICA8L1Byb3BlcnR5Pg0KICAgICAgICAgICAgPFByb3BlcnR5IGtleT0id3NzUHJvY2Vzc2luZ0VuYWJsZWQiPg0KICAgICAgICAgICAgICAgIDxCb29sZWFuVmFsdWU+ZmFsc2U8L0Jvb2xlYW5WYWx1ZT4NCiAgICAgICAgICAgIDwvUHJvcGVydHk+DQogICAgICAgICAgICA8UHJvcGVydHkga2V5PSJzb2FwIj4NCiAgICAgICAgICAgICAgICA8Qm9vbGVhblZhbHVlPmZhbHNlPC9Cb29sZWFuVmFsdWU+DQogICAgICAgICAgICA8L1Byb3BlcnR5Pg0KICAgICAgICAgICAgPFByb3BlcnR5IGtleT0iaW50ZXJuYWwiPg0KICAgICAgICAgICAgICAgIDxCb29sZWFuVmFsdWU+ZmFsc2U8L0Jvb2xlYW5WYWx1ZT4NCiAgICAgICAgICAgIDwvUHJvcGVydHk+DQogICAgICAgIDwvUHJvcGVydGllcz4NCiAgICA8L1NlcnZpY2VEZXRhaWw+DQogICAgPFJlc291cmNlcz4NCiAgICAgICAgPFJlc291cmNlU2V0IHRhZz0icG9saWN5Ij4NCiAgICAgICAgICAgIDxSZXNvdXJjZSB2ZXJzaW9uPSIxIiB0eXBlPSJwb2xpY3kiPg0KJHtwb2xpY3lYbWx9DQo8L1Jlc291cmNlPg0KICAgICAgICA8L1Jlc291cmNlU2V0Pg0KICAgIDwvUmVzb3VyY2VzPg0KPC9TZXJ2aWNlPg=="/>
+                            <L7p:VariableToSet stringValue="serviceXml"/>
+                        </L7p:SetVariable>
+                        <L7p:assertionComment>
+                            <L7p:Properties mapValue="included">
+                                <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Build Policy XML and Service XML"/>
+                                </L7p:entry>
+                            </L7p:Properties>
+                        </L7p:assertionComment>
+                    </wsp:All>
+                    <wsp:All wsp:Usage="Required">
+                        <L7p:CustomizeErrorResponse>
+                            <L7p:Content stringValue="Service Creation Error"/>
+                            <L7p:ExtraHeaders nameValuePairArray="included"/>
+                        </L7p:CustomizeErrorResponse>
+                        <L7p:UUIDGenerator>
+                            <L7p:MaximumQuantity intValue="1"/>
+                            <L7p:TargetVariable stringValue="guid"/>
+                        </L7p:UUIDGenerator>
+                        <L7p:SetVariable>
+                            <L7p:AssertionComment assertionComment="included">
+                                <L7p:Properties mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// ws-man create request"/>
+                                    </L7p:entry>
+                                </L7p:Properties>
+                            </L7p:AssertionComment>
+                            <L7p:Base64Expression stringValue="PGVudjpFbnZlbG9wZSB4bWxuczplbnY9Imh0dHA6Ly93d3cudzMub3JnLzIwMDMvMDUvc29hcC1lbnZlbG9wZSINCiAgICB4bWxuczp3c2E9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDQvMDgvYWRkcmVzc2luZyINCiAgICB4bWxuczp3c2U9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDQvMDgvZXZlbnRpbmciDQogICAgeG1sbnM6d3Nlbj0iaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNC8wOS9lbnVtZXJhdGlvbiINCiAgICB4bWxuczp3c21hbj0iaHR0cDovL3NjaGVtYXMuZG10Zi5vcmcvd2JlbS93c21hbi8xL3dzbWFuLnhzZCINCiAgICB4bWxuczp3eGY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDQvMDkvdHJhbnNmZXIiIHhtbG5zOnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSI+DQogICAgPGVudjpIZWFkZXI+DQogICAgICAgIDx3c2E6QWN0aW9uIGVudjptdXN0VW5kZXJzdGFuZD0idHJ1ZSI+aHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNC8wOS90cmFuc2Zlci9DcmVhdGU8L3dzYTpBY3Rpb24+DQogICAgICAgIDx3c2E6UmVwbHlUbz4NCiAgICAgICAgICAgIDx3c2E6QWRkcmVzcyBlbnY6bXVzdFVuZGVyc3RhbmQ9InRydWUiPmh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDQvMDgvYWRkcmVzc2luZy9yb2xlL2Fub255bW91czwvd3NhOkFkZHJlc3M+DQogICAgICAgIDwvd3NhOlJlcGx5VG8+DQogICAgICAgIDx3c2E6TWVzc2FnZUlEIGVudjptdXN0VW5kZXJzdGFuZD0idHJ1ZSI+dXVpZDoke2d1aWR9PC93c2E6TWVzc2FnZUlEPg0KICAgICAgICA8d3NhOlRvIGVudjptdXN0VW5kZXJzdGFuZD0idHJ1ZSI+aHR0cHM6Ly8ke2dhdGV3YXkuY2x1c3Rlci5ob3N0bmFtZX06ODQ0My93c21hbjwvd3NhOlRvPg0KDQogICAgICAgIDx3c21hbjpSZXNvdXJjZVVSST5odHRwOi8vbnMubDd0ZWNoLmNvbS8yMDEwLzA0L2dhdGV3YXktbWFuYWdlbWVudC9zZXJ2aWNlczwvd3NtYW46UmVzb3VyY2VVUkk+DQogICAgICAgIDx3c21hbjpPcGVyYXRpb25UaW1lb3V0PlAwWTBNMERUMEg1TTAuMDAwUzwvd3NtYW46T3BlcmF0aW9uVGltZW91dD4NCiAgICA8L2VudjpIZWFkZXI+DQogICAgPGVudjpCb2R5Pg0KJHtzZXJ2aWNlWG1sfQ0KICAgIDwvZW52OkJvZHk+DQo8L2VudjpFbnZlbG9wZT4="/>
+                            <L7p:ContentType stringValue="application/soap+xml;charset=UTF-8;action=&quot;http://schemas.xmlsoap.org/ws/2004/09/transfer/Create&quot;"/>
+                            <L7p:DataType variableDataType="message"/>
+                            <L7p:VariableToSet stringValue="wsmanRequest"/>
+                        </L7p:SetVariable>
+                        <L7p:HttpRoutingAssertion>
+                            <L7p:HttpMethod httpMethod="POST"/>
+                            <L7p:PassthroughHttpAuthentication booleanValue="true"/>
+                            <L7p:ProtectedServiceUrl stringValue="https://${gateway.cluster.hostname}:8443/wsman"/>
+                            <L7p:ProxyPassword stringValueNull="null"/>
+                            <L7p:ProxyUsername stringValueNull="null"/>
+                            <L7p:RequestHeaderRules httpPassthroughRuleSet="included">
+                                <L7p:Rules httpPassthroughRules="included">
+                                    <L7p:item httpPassthroughRule="included">
+                                    <L7p:Name stringValue="Cookie"/>
+                                    </L7p:item>
+                                    <L7p:item httpPassthroughRule="included">
+                                    <L7p:Name stringValue="SOAPAction"/>
+                                    </L7p:item>
+                                </L7p:Rules>
+                            </L7p:RequestHeaderRules>
+                            <L7p:RequestMsgSrc stringValue="wsmanRequest"/>
+                            <L7p:RequestParamRules httpPassthroughRuleSet="included">
+                                <L7p:ForwardAll booleanValue="true"/>
+                                <L7p:Rules httpPassthroughRules="included"/>
+                            </L7p:RequestParamRules>
+                            <L7p:ResponseHeaderRules httpPassthroughRuleSet="included">
+                                <L7p:Rules httpPassthroughRules="included">
+                                    <L7p:item httpPassthroughRule="included">
+                                    <L7p:Name stringValue="Set-Cookie"/>
+                                    </L7p:item>
+                                </L7p:Rules>
+                            </L7p:ResponseHeaderRules>
+                            <L7p:ResponseMsgDest stringValue="wsmanResponse"/>
+                            <L7p:SamlAssertionVersion intValue="2"/>
+                        </L7p:HttpRoutingAssertion>
+                        <L7p:ResponseXpathAssertion>
+                            <L7p:VariablePrefix stringValue="serviceId"/>
+                            <L7p:XmlMsgSrc stringValue="wsmanResponse"/>
+                            <L7p:XpathExpression xpathExpressionValue="included">
+                                <L7p:Expression stringValue="/env:Envelope/env:Body/wxf:ResourceCreated/wsa:ReferenceParameters/wsman:SelectorSet/wsman:Selector"/>
+                                <L7p:Namespaces mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="wsa"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="mdo"/>
+                                    <L7p:value stringValue="http://schemas.wiseman.dev.java.net/metadata/messagetypes"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="s"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/soap/envelope/"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="l7"/>
+                                    <L7p:value stringValue="http://ns.l7tech.com/2010/04/gateway-management"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="xs"/>
+                                    <L7p:value stringValue="http://www.w3.org/2001/XMLSchema"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="wxf"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/ws/2004/09/transfer"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="wsen"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/ws/2004/09/enumeration"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="env"/>
+                                    <L7p:value stringValue="http://www.w3.org/2003/05/soap-envelope"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="wsman"/>
+                                    <L7p:value stringValue="http://schemas.dmtf.org/wbem/wsman/1/wsman.xsd"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="wsmeta"/>
+                                    <L7p:value stringValue="http://schemas.dmtf.org/wbem/wsman/1/wsman/version1.0.0.a/default-addressing-model.xsd"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="wse"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/ws/2004/08/eventing"/>
+                                    </L7p:entry>
+                                    <L7p:entry>
+                                    <L7p:key stringValue="mex"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/ws/2004/09/mex"/>
+                                    </L7p:entry>
+                                </L7p:Namespaces>
+                            </L7p:XpathExpression>
+                        </L7p:ResponseXpathAssertion>
+                        <L7p:assertionComment>
+                            <L7p:Properties mapValue="included">
+                                <L7p:entry>
+                                    <L7p:key stringValue="RIGHT.COMMENT"/>
+                                    <L7p:value stringValue="// Create Service using ws-man"/>
+                                </L7p:entry>
+                            </L7p:Properties>
+                        </L7p:assertionComment>
+                    </wsp:All>
+                    <L7p:HardcodedResponse>
+                        <L7p:Base64ResponseBody stringValue="PGh0bWw+CjxoZWFkPgo8dGl0bGU+U09BUCB0byBSRVNUIENvbnZlcnNpb246IFN0ZXAgMzwvdGl0bGU+CjxzdHlsZT4KLnN0ZXAzIHsKZm9udC13ZWlnaHQ6IGJvbGQ7Cn0KLndzZGxVcGxvYWRGb3JtIHsKZGlzcGxheTogbm9uZTsKfQo8L3N0eWxlPgo8L2hlYWQ+Cjxib2R5Pgoke3dzZGxVcGxvYWRUZW1wbGF0ZX0KCjxoMj5TZXJ2aWNlIENyZWF0ZWQgU3VjY2Vzc2Z1bGx5ITwvaDI+Cgo8cD5TZXJ2aWNlIE5hbWU6ICR7c2VydmljZU5hbWUucmVzdWx0fTxici8+CkdhdGV3YXkgVVJMOiBodHRwOi8vJHtnYXRld2F5LmNsdXN0ZXIuaG9zdG5hbWV9OjgwODAke3NlcnZpY2VCYXNlVXJsLnJlc3VsdH0ve29wZXJhdGlvbi1uYW1lfTxici8+ClZpcnR1YWxpemVkIFNPQVAgRW5kcG9pbnQ6ICR7c2VydmljZVNvYXBFbmRwb2ludC5yZXN1bHR9PGJyLz4KU2VydmljZSBJRDogJHtzZXJ2aWNlSWQucmVzdWx0fTwvcD4KCjxoci8+CiR7aHRtbERvYy5tYWluUGFydH0KPGgyPlNhbXBsZSBXQURMIG9uIGdlbmVyYXRlZCBSRVNUL1NPQVAgcHJveHkgc2VydmljZTwvaDI+Cjx0ZXh0YXJlYSByb3dzPSIyMCIgY29scz0iNjAiPiR7d2FkbC5tYWluUGFydH08L3RleHRhcmVhPgo8aHIvPgo8YSBocmVmPSIke2Jhc2VVcmx9Ij5TdGFydCBPdmVyPC9hPgo8L2JvZHk+CjwvaHRtbD4="/>
+                        <L7p:ResponseContentType stringValue="text/html; charset=UTF-8"/>
+                    </L7p:HardcodedResponse>
+                    <L7p:assertionComment>
+                        <L7p:Properties mapValue="included">
+                            <L7p:entry>
+                                <L7p:key stringValue="LEFT.COMMENT"/>
+                                <L7p:value stringValue="Step 3:"/>
+                            </L7p:entry>
+                            <L7p:entry>
+                                <L7p:key stringValue="RIGHT.COMMENT"/>
+                                <L7p:value stringValue="// post of service details and creating service"/>
+                            </L7p:entry>
+                        </L7p:Properties>
+                    </L7p:assertionComment>
+                </wsp:All>
+                <L7p:assertionComment>
+                    <L7p:Properties mapValue="included">
+                        <L7p:entry>
+                            <L7p:key stringValue="RIGHT.COMMENT"/>
+                            <L7p:value stringValue="// Steps of configuration"/>
+                        </L7p:entry>
+                    </L7p:Properties>
+                </L7p:assertionComment>
+            </wsp:OneOrMore>
+        </wsp:All>
+    </wsp:Policy>
+</exp:Export>
